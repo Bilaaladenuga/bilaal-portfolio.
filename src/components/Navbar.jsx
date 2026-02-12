@@ -32,8 +32,25 @@ const Navbar = () => {
       lineHeight: scrolled ? "70px" : "90px"
     }}>
       <div className="nav-logo">
-        <p className="nav-name">Bilaal</p>
-        <span>.</span>
+        <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '2px' }}>
+          <p className="nav-name" style={{
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 700,
+            fontSize: '1.6rem',
+            letterSpacing: '-0.03em',
+            color: '#0f172a'
+          }}>
+            bilaal
+          </p>
+          <span style={{
+            fontSize: '2rem',
+            fontWeight: 800,
+            background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            lineHeight: 1
+          }}>.</span>
+        </Link>
       </div>
       <div className={`nav-menu ${menuOpen ? 'responsive' : ''}`} id="myNavMenu">
         <ul className="nav_menu_list">
