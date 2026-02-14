@@ -52,6 +52,7 @@ const Navbar = () => {
           }}>.</span>
         </Link>
       </div>
+      <ThemeToggle />
       <div className={`nav-menu ${menuOpen ? 'responsive' : ''}`} id="myNavMenu">
         <ul className="nav_menu_list">
           <li className="nav_list">
@@ -82,6 +83,46 @@ const Navbar = () => {
       </div>
     </nav>
   );
+};
+
+const ThemeToggle = () => {
+    const [isDark, setIsDark] = useState(() => {
+        return document.body.classList.contains('dark-mode') || 
+               localStorage.getItem('theme') === 'dark';
+    });
+
+    useEffect(() => {
+        if (isDark) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+        }
+    }, [isDark]);
+
+    return (
+        <button 
+            onClick={() => setIsDark(!isDark)}
+            className="btn"
+            style={{
+                width: '45px',
+                height: '45px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: '50%',
+                padding: 0,
+                fontSize: '1.2rem',
+                marginRight: '15px',
+                background: 'var(--color-white)',
+                boxShadow: 'var(--first-shadow-color)'
+            }}
+            aria-label="Toggle Dark Mode"
+        >
+            <i className={`uil ${isDark ? 'uil-sun' : 'uil-moon'}`}></i>
+        </button>
+    );
 };
 
 export default Navbar;

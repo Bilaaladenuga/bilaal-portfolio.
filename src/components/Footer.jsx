@@ -28,10 +28,21 @@ const Footer = () => {
             </ul>
         </div>
         <div className="footer-social-icons">
-            <div className="icon"><i className="uil uil-instagram"></i></div>
-            <div className="icon"><i className="uil uil-linkedin-alt"></i></div>
-            <div className="icon"><i className="uil uil-twitter"></i></div>
-            <div className="icon"><i className="uil uil-github-alt"></i></div>
+            <div className="icon">
+                <a href="https://www.instagram.com/adenugabilaal/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                    <i className="uil uil-instagram"></i>
+                </a>
+            </div>
+            <div className="icon">
+                <a href="https://ng.linkedin.com/in/adenuga-bilaal" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                    <i className="uil uil-linkedin-alt"></i>
+                </a>
+            </div>
+            <div className="icon">
+                <a href="https://github.com/Bilaaladenuga" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                    <i className="uil uil-github-alt"></i>
+                </a>
+            </div>
         </div>
         <div className="bottom-footer">
             <p>Copyright © <Link to="/" style={{textDecoration: 'none'}}>BILAAL ADENUGA X MOBO DIGITAL</Link> - All rights reserved
