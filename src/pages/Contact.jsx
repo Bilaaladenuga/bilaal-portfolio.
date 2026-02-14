@@ -1,7 +1,37 @@
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [status, setStatus] = useState('idle'); // idle | sending | success | error
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('sending');
+
+        try {
+            const res = await fetch('https://formspree.io/f/xpwzgqkb', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (res.ok) {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                setStatus('error');
+            }
+        } catch {
+            setStatus('error');
+        }
+    };
+
     return (
         <motion.section 
             initial={{ opacity: 0, scale: 0.95 }}
@@ -24,18 +54,57 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="col">
-                    <div className="form-control">
+                    <form className="form-control" onSubmit={handleSubmit}>
                         <div className="form-inputs">
-                            <input type="text" className="input-field" placeholder="Name" />
-                            <input type="text" className="input-field" placeholder="Email" />
+                            <input 
+                                type="text" 
+                                name="name"
+                                className="input-field" 
+                                placeholder="Name" 
+                                value={formData.name}
+                                onChange={handleChange}
+                                required 
+                            />
+                            <input 
+                                type="email" 
+                                name="email"
+                                className="input-field" 
+                                placeholder="Email" 
+                                value={formData.email}
+                                onChange={handleChange}
+                                required 
+                            />
                         </div>
                         <div className="text-area">
-                            <textarea placeholder="Message"></textarea>
+                            <textarea 
+                                name="message"
+                                placeholder="Message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            ></textarea>
                         </div>
                         <div className="form-button">
-                            <button className="btn">Send <i className="uil uil-message"></i></button>
+                            <button 
+                                className="btn" 
+                                type="submit"
+                                disabled={status === 'sending'}
+                                style={{ opacity: status === 'sending' ? 0.7 : 1 }}
+                            >
+                                {status === 'sending' ? 'Sending...' : 'Send'} <i className="uil uil-message"></i>
+                            </button>
                         </div>
-                    </div>
+                        {status === 'success' && (
+                            <p style={{ color: '#22c55e', marginTop: '15px', fontWeight: 500 }}>
+                                ✓ Message sent! I'll get back to you soon.
+                            </p>
+                        )}
+                        {status === 'error' && (
+                            <p style={{ color: '#ef4444', marginTop: '15px', fontWeight: 500 }}>
+                                Something went wrong. Please try again or email me directly.
+                            </p>
+                        )}
+                    </form>
                 </div>
             </div>
         </motion.section>
