@@ -69,11 +69,21 @@ const Home = () => {
                     </motion.div>
                     
                     <motion.div variants={staggerContainer} className="social_icons">
-                        {['instagram', 'linkedin-alt', 'twitter', 'github-alt'].map((icon, index) => (
-                            <motion.div key={index} variants={fadeInUp} className="icon">
-                                <i className={`uil uil-${icon}`}></i>
-                            </motion.div>
-                        ))}
+                        <motion.div variants={fadeInUp} className="icon">
+                            <a href="https://www.instagram.com/adenugabilaal/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                                <i className="uil uil-instagram"></i>
+                            </a>
+                        </motion.div>
+                        <motion.div variants={fadeInUp} className="icon">
+                            <a href="https://ng.linkedin.com/in/adenuga-bilaal" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                                <i className="uil uil-linkedin-alt"></i>
+                            </a>
+                        </motion.div>
+                        <motion.div variants={fadeInUp} className="icon">
+                            <a href="https://github.com/Bilaaladenuga" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                                <i className="uil uil-github-alt"></i>
+                            </a>
+                        </motion.div>
                     </motion.div>
                 </div>
                 
