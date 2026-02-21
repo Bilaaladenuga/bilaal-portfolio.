@@ -1,78 +1,74 @@
 
 import { motion } from 'framer-motion';
 
-const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.3
-        }
-    }
-};
-
-const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { 
-        opacity: 1, 
-        y: 0, 
-        transition: { 
-            type: "spring",
-            stiffness: 100,
-            damping: 12
-        } 
-    }
-};
+const phases = [
+    {
+        year: '2020',
+        title: 'The Fundamentals',
+        body: 'Started with HTML, CSS, and JavaScript. Built static sites and learned the core of the web — understanding how browsers render content and how to craft clean, semantic markup.',
+        icon: 'uil-code-branch',
+    },
+    {
+        year: '2021 – 2022',
+        title: 'Moving Beyond Static Pages',
+        body: 'Mastered React and Next.js. Started building dynamic, data-driven applications and developed a deep understanding of state management, component design, and frontend architecture.',
+        icon: 'uil-react',
+    },
+    {
+        year: '2023 – 2024',
+        title: 'Backend, AI & Full Stack',
+        body: 'Expanded into Node.js, Python, PostgreSQL, and AI integrations. Began working with OpenAI APIs, building chatbots, generative tools, and exploring automated workflows with LangChain.',
+        icon: 'uil-robot',
+    },
+    {
+        year: '2025',
+        title: 'Co-Founding MOBO Digital',
+        body: 'Launched MOBO Digital — an agency building scalable web solutions for clients. Focused on business logic, technical leadership, and delivering real-world impact through software.',
+        icon: 'uil-rocket',
+    },
+    {
+        year: 'Now',
+        title: 'AI Systems & Architecture',
+        body: 'Deepening expertise in LLM agents, backend system architecture, and building complex end-to-end AI-powered products. Continuously pushing the boundaries of what\'s possible.',
+        icon: 'uil-chart-growth',
+    },
+];
 
 const Journey = () => {
     return (
-        <motion.section 
-            initial="hidden"
-            animate="visible"
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="section"
+            className="wrapper section"
         >
-             <div className="top-header">
+            <div className="top-header">
                 <h1>My Journey</h1>
                 <span>Strategic Timeline</span>
             </div>
-            
-            <div className="row">
-                 <motion.div 
-                    variants={staggerContainer}
-                    className="col" 
-                    style={{ width: '100%', flexDirection: 'column', gap: '20px', alignItems: 'center' }}
-                >
-                    
-                    {/* Phase 1 */}
-                    <motion.div variants={fadeInUp} className="about-info" style={{ width: '80%', textAlign: 'left', alignItems: 'flex-start' }}>
-                        <h3>2020: The Fundamentals</h3>
-                        <p style={{textAlign: 'left'}}>Started with HTML, CSS, JavaScript. Built static sites and learned the core of the web.</p>
-                    </motion.div>
 
-                    {/* Phase 2 */}
-                    <motion.div variants={fadeInUp} className="about-info" style={{ width: '80%', textAlign: 'left', alignItems: 'flex-start' }}>
-                        <h3>2021-2022: Moving Beyond Static Pages</h3>
-                        <p style={{textAlign: 'left'}}>Mastered React and Next.js. Started building dynamic applications and understanding state management.</p>
+            <div className="timeline">
+                {phases.map((p, i) => (
+                    <motion.div
+                        key={p.year}
+                        className="timeline-item"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: i * 0.05 }}
+                        viewport={{ once: true }}
+                    >
+                        <div className="timeline-dot"></div>
+                        <div className="timeline-year">
+                            <i className={`uil ${p.icon}`} style={{ marginRight: '6px', fontSize: '1.4rem', verticalAlign: 'middle' }}></i>
+                            {p.year}
+                        </div>
+                        <div className="timeline-title">{p.title}</div>
+                        <div className="timeline-body">{p.body}</div>
                     </motion.div>
-
-                    {/* Phase 3 */}
-                    <motion.div variants={fadeInUp} className="about-info" style={{ width: '80%', textAlign: 'left', alignItems: 'flex-start' }}>
-                        <h3>2025: Co-Founding MOBO Digital</h3>
-                        <p style={{textAlign: 'left'}}>Launched an agency to build scalable web solutions for clients. Focused on business logic and real-world impact.</p>
-                    </motion.div>
-
-                    {/* Phase 4 */}
-                    <motion.div variants={fadeInUp} className="about-info" style={{ width: '80%', textAlign: 'left', alignItems: 'flex-start' }}>
-                        <h3>Present: AI Systems & Architecture</h3>
-                        <p style={{textAlign: 'left'}}>Deepening expertise in LLM agents, backend architecture, and building complex systems.</p>
-                    </motion.div>
-
-                 </motion.div>
+                ))}
             </div>
         </motion.section>
     );
 };
 
 export default Journey;
-

@@ -8,121 +8,87 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const [activeSection, setActiveSection] = useState('');
+
+  const toggleMenu = () => setMenuOpen(prev => !prev);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
+      setScrolled(window.scrollY > 20);
+
+      // Scroll spy logic for Home page
+      if (location.pathname === '/') {
+        const sections = ['home', 'about', 'projects'];
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= 100 && rect.bottom >= 100) {
+              setActiveSection(section);
+              break;
+            }
+          }
+        }
       } else {
-        setScrolled(false);
+        setActiveSection('');
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location.pathname]);
 
-  const isActive = (path) => location.pathname === path ? 'active-link' : '';
+  // Close menu on route change
+  useEffect(() => { setMenuOpen(false); }, [location]);
+
+  const isActive = (path) => {
+    if (path === '/' && location.pathname === '/') return 'active-link';
+    return location.pathname === path ? 'active-link' : '';
+  };
 
   return (
-    <nav id="header" style={{ 
-      boxShadow: scrolled ? "0 1px 6px rgba(0, 0, 0, 0.1)" : "none",
-      height: scrolled ? "70px" : "90px",
-      lineHeight: scrolled ? "70px" : "90px"
+    <nav id="header" className={scrolled ? 'scrolled' : ''} style={{
+      boxShadow: scrolled ? '0 4px 24px rgba(0,0,0,0.4)' : 'none',
     }}>
+      {/* Logo */}
       <div className="nav-logo">
-        <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '2px' }}>
-          <p className="nav-name" style={{
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 700,
-            fontSize: '1.6rem',
-            letterSpacing: '-0.03em',
-            color: '#0f172a'
-          }}>
-            bilaal
-          </p>
-          <span style={{
-            fontSize: '2rem',
-            fontWeight: 800,
-            background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            lineHeight: 1
-          }}>.</span>
+        <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'baseline', gap: '1px' }}>
+          <p className="nav-name">bilaal</p>
+          <span className="nav-dot">.</span>
         </Link>
       </div>
-      <ThemeToggle />
+
+      {/* Desktop Nav */}
       <div className={`nav-menu ${menuOpen ? 'responsive' : ''}`} id="myNavMenu">
         <ul className="nav_menu_list">
-          <li className="nav_list">
-            <Link to="/" className={`nav-link ${isActive('/')}`} onClick={() => setMenuOpen(false)}>Home</Link>
-            <div className="circle"></div>
-          </li>
-          <li className="nav_list">
-            <Link to="/work" className={`nav-link ${isActive('/work')}`} onClick={() => setMenuOpen(false)}>Work</Link>
-            <div className="circle"></div>
-          </li>
-          <li className="nav_list">
-            <Link to="/journey" className={`nav-link ${isActive('/journey')}`} onClick={() => setMenuOpen(false)}>Journey</Link>
-            <div className="circle"></div>
-          </li>
-          <li className="nav_list">
-            <Link to="/now" className={`nav-link ${isActive('/now')}`} onClick={() => setMenuOpen(false)}>Now</Link>
-            <div className="circle"></div>
-          </li>
-          <li className="nav_list">
-            <Link to="/contact" className={`nav-link ${isActive('/contact')}`} onClick={() => setMenuOpen(false)}>Contact</Link>
-            <div className="circle"></div>
-          </li>
+          {[
+            ['/', 'Home'],
+            ['/work', 'Work'],
+            ['/journey', 'Journey'],
+            ['/now', 'Now'],
+            ['/contact', 'Contact'],
+            ['/resume', 'Resume']
+          ].map(([path, label]) => (
+            <li key={path} className="nav_list">
+              <Link
+                to={path}
+                className={`nav-link ${isActive(path)}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
-      <div className="nav-menu-btn">
-        <i className="uil uil-bars" onClick={menuOpen ? toggleMenu : toggleMenu}></i>
+      {/* Right controls */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div className="nav-menu-btn" onClick={toggleMenu}>
+          <i className={`uil ${menuOpen ? 'uil-times' : 'uil-bars'}`}></i>
+        </div>
       </div>
     </nav>
   );
-};
-
-const ThemeToggle = () => {
-    const [isDark, setIsDark] = useState(() => {
-        return document.body.classList.contains('dark-mode') || 
-               localStorage.getItem('theme') === 'dark';
-    });
-
-    useEffect(() => {
-        if (isDark) {
-            document.body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light');
-        }
-    }, [isDark]);
-
-    return (
-        <button 
-            onClick={() => setIsDark(!isDark)}
-            className="btn"
-            style={{
-                width: '45px',
-                height: '45px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: '50%',
-                padding: 0,
-                fontSize: '1.2rem',
-                marginRight: '15px',
-                background: 'var(--color-white)',
-                boxShadow: 'var(--first-shadow-color)'
-            }}
-            aria-label="Toggle Dark Mode"
-        >
-            <i className={`uil ${isDark ? 'uil-sun' : 'uil-moon'}`}></i>
-        </button>
-    );
 };
 
 export default Navbar;
