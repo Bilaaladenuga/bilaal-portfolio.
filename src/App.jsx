@@ -1,29 +1,48 @@
 
+import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Layout from './layouts/Layout';
 import ScrollToTop from './components/ScrollToTop';
-import Home from './pages/Home';
-import Work from './pages/Work';
-import Journey from './pages/Journey';
-import Now from './pages/Now';
-import Contact from './pages/Contact';
-import Resume from './pages/Resume';
-import NotFound from './pages/NotFound';
+
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const Work = lazy(() => import('./pages/Work'));
+const Journey = lazy(() => import('./pages/Journey'));
+const Now = lazy(() => import('./pages/Now'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Resume = lazy(() => import('./pages/Resume'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+
+// Loading fallback component
+const PageLoader = () => (
+  <div style={{
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: 'var(--bg)',
+    color: 'var(--indigo)'
+  }}>
+    <div className="loader"></div>
+  </div>
+);
 
 function AnimatedRoutes() {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/journey" element={<Journey />} />
-        <Route path="/now" element={<Now />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/journey" element={<Journey />} />
+          <Route path="/now" element={<Now />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </AnimatePresence>
   );
 }

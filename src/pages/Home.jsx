@@ -124,7 +124,7 @@ const Home = () => {
                     className="featured-image"
                 >
                     <div className="image">
-                        <img src="/assets/IMG-20230421-WA0040.jpg" alt="Bilaal Adenuga" />
+                        <img src="/assets/IMG-20230421-WA0040.jpg" alt="Bilaal Adenuga" fetchpriority="high" />
                     </div>
                 </motion.div>
             </section>
@@ -211,6 +211,7 @@ const Home = () => {
                                         <img
                                             src={skill.icon}
                                             alt={skill.name}
+                                            loading="lazy"
                                             style={{ width: '28px', height: '28px', objectFit: 'contain' }}
                                         />
                                         <span style={{
