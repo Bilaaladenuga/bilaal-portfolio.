@@ -75,18 +75,18 @@ const projects = [
         href: 'https://github.com/Bilaaladenuga/qalb-qur-an'
     },
     {
-        icon: 'uil-robot',
-        name: 'Bidmaj Chatbot',
-        label: 'A chatbot that holds real conversations',
-        stack: 'Python • NLP • API',
-        href: 'https://github.com/Bilaaladenuga/Bidmaj-Chatbot-'
+        icon: 'uil-file-edit-alt',
+        name: 'ResuCraft',
+        label: 'An AI resume builder that passes the filters',
+        stack: 'TypeScript • Gemini API',
+        href: 'https://github.com/Bilaaladenuga/ResuCraft'
     },
     {
-        icon: 'uil-image',
-        name: 'AI Image Gen',
-        label: 'Type a prompt, get an image',
-        stack: 'React • OpenAI • Node.js',
-        href: 'https://github.com/Bilaaladenuga/AI-Image-generator-'
+        icon: 'uil-edit',
+        name: 'AnnoTater',
+        label: 'A Chrome extension that makes research less painful',
+        stack: 'JavaScript • Chrome API',
+        href: 'https://github.com/Bilaaladenuga/AnnoTater'
     },
 ];
 
