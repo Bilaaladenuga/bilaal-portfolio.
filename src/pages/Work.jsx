@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import GitHubRepos from '../components/GitHubRepos';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -154,6 +155,9 @@ const Work = () => {
                     </motion.div>
                 ))}
             </motion.div>
+
+            {/* ── ALL GITHUB REPOSITORIES ── */}
+            <GitHubRepos />
         </motion.section>
     );
 };

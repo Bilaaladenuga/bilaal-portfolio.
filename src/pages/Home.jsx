@@ -124,7 +124,13 @@ const Home = () => {
                     className="featured-image"
                 >
                     <div className="image">
-                        <img src="/assets/IMG-20230421-WA0040.jpg" alt="Bilaal Adenuga" fetchpriority="high" />
+                        <img src="/assets/IMG-20230421-WA0040.jpg" alt="Bilaal Adenuga" fetchPriority="high" />
+                        <div className="hero-badge hero-badge-b">
+                            <i className="uil uil-robot"></i> AI Systems
+                        </div>
+                        <div className="hero-badge hero-badge-c">
+                            <i className="uil uil-code-branch"></i> Full-Stack
+                        </div>
                     </div>
                 </motion.div>
             </section>
