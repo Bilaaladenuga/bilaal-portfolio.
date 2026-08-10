@@ -1400,6 +1400,7 @@ footer::before {
         backdrop-filter: blur(20px);
         width: 100%;
         height: 100vh;
+        height: 100dvh;
         transition: 0.35s ease;
         z-index: 999;
     }
@@ -1493,5 +1494,55 @@ footer::before {
 
     .project-container {
         grid-template-columns: 1fr;
+    }
+
+    /* Tighten vertical rhythm on phones */
+    .section {
+        padding-block: 4em;
+    }
+
+    .top-header {
+        margin-bottom: 3em;
+    }
+
+    /* Slightly larger hero portrait for better presence */
+    .image {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Contact card: reduce padding so content breathes at 320px */
+    .contact-info {
+        padding: 32px 24px;
+    }
+
+    /* Timeline: narrower left rail + tighter cards */
+    .timeline {
+        padding-left: 24px;
+    }
+
+    .timeline-dot {
+        left: -28px;
+    }
+
+    .timeline-item {
+        padding: 20px;
+    }
+
+    .now-item {
+        padding: 18px 16px;
+        gap: 14px;
+    }
+
+    /* Resume skills: stack label above value on narrow screens */
+    .resume-skills-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 400px) {
+    /* Consistent fixed padding on the smallest screens */
+    .wrapper {
+        padding-inline: 20px;
     }
 }

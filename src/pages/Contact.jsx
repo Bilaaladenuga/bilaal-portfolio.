@@ -64,7 +64,7 @@ const Contact = () => {
                             <p
                                 onClick={copyEmail}
                                 title="Click to copy email"
-                                style={{ cursor: 'pointer', userSelect: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
+                                style={{ cursor: 'pointer', userSelect: 'none', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}
                             >
                                 <i className="uil uil-envelope"></i>
                                 {EMAIL}

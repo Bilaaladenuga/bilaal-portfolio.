@@ -37,7 +37,8 @@ const Resume = () => {
                 transition={{ duration: 0.5 }}
                 className="resume-page"
                 style={{
-                    maxWidth: '780px', margin: '0 auto', padding: '52px 56px',
+                    maxWidth: '780px', margin: '0 auto',
+                    padding: 'clamp(28px, 6vw, 52px) clamp(24px, 6vw, 56px)',
                     background: 'var(--bg-card)', border: '1px solid var(--border)',
                     borderRadius: '20px', lineHeight: '1.65',
                 }}
@@ -139,7 +140,7 @@ const Resume = () => {
 
                 {/* Skills */}
                 <ResumeSection title="Technical Skills">
-                    <div style={{ display: 'grid', gridTemplateColumns: '140px 1fr', gap: '8px 16px', fontSize: '0.9rem', marginBottom: '16px' }}>
+                    <div className="resume-skills-grid" style={{ display: 'grid', gridTemplateColumns: '140px 1fr', gap: '8px 16px', fontSize: '0.9rem', marginBottom: '16px' }}>
                         {[
                             ['Frontend', 'React, Next.js 14, Tailwind CSS, Framer Motion, HTML5, CSS3'],
                             ['Backend', 'Node.js, Express, Python, FastAPI, REST APIs'],
