@@ -11,7 +11,7 @@ export default {
       },
       colors: {
         // Custom soothing palette (overriding/extending defaults if needed)
-        primary: '#f59e0b', // Indigo 500
+        primary: '#2563eb', // Indigo 500
         secondary: '#64748b', // Slate 500
         dark: '#0f172a', // Slate 900
         light: '#f8fafc', // Slate 50

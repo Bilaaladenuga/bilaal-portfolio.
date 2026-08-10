@@ -14,7 +14,7 @@ const stagger = {
 const projects = [
     {
         icon: 'uil-mobile-android',
-        color: '#f59e0b',
+        color: '#2563eb',
         name: "Qalb Qur'an",
         desc: "A beautiful mobile app for Muslim women to support Quran memorisation, spiritual growth, and community connection.",
         stack: ['React Native', 'Firebase'],
@@ -22,7 +22,7 @@ const projects = [
     },
     {
         icon: 'uil-robot',
-        color: '#8b5cf6',
+        color: '#6366f1',
         name: 'Bidmaj Chatbot',
         desc: 'An intelligent conversational agent handling natural language queries with proficiency in NLP and backend integration.',
         stack: ['Python', 'NLP', 'API'],
@@ -30,7 +30,7 @@ const projects = [
     },
     {
         icon: 'uil-image',
-        color: '#fbbf24',
+        color: '#06b6d4',
         name: 'AI Image Gen',
         desc: 'A web application leveraging generative AI to create images from text prompts, integrated with modern AI APIs.',
         stack: ['React', 'OpenAI', 'Node.js'],
@@ -108,7 +108,7 @@ const Work = () => {
                         }}
                         whileHover={{
                             y: -8,
-                            boxShadow: '0 20px 50px rgba(0,0,0,0.35), 0 0 0 1px rgba(245,158,11,0.3)',
+                            boxShadow: '0 20px 50px rgba(0,0,0,0.35), 0 0 0 1px rgba(37,99,235,0.3)',
                         }}
                     >
                         <div style={{
@@ -131,9 +131,9 @@ const Work = () => {
                             {p.stack.map(t => (
                                 <span key={t} style={{
                                     fontSize: '0.75rem', fontWeight: 600,
-                                    background: 'rgba(245,158,11,0.1)',
+                                    background: 'rgba(37,99,235,0.1)',
                                     color: 'var(--indigo)',
-                                    border: '1px solid rgba(245,158,11,0.2)',
+                                    border: '1px solid rgba(37,99,235,0.2)',
                                     padding: '3px 10px', borderRadius: '50px'
                                 }}>{t}</span>
                             ))}

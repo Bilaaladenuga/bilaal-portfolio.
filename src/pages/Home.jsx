@@ -212,7 +212,7 @@ const Home = () => {
                                             cursor: 'default',
                                         }}
                                         onMouseEnter={e => e.currentTarget.style.borderColor = skill.color}
-                                        onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(245,158,11,0.15)'}
+                                        onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(37,99,235,0.15)'}
                                     >
                                         <img
                                             src={skill.icon}
@@ -259,9 +259,9 @@ const Home = () => {
                                 {p.stack.split(' • ').map(t => (
                                     <span key={t} style={{
                                         fontSize: '0.75rem', fontWeight: 600,
-                                        background: 'rgba(245,158,11,0.12)',
+                                        background: 'rgba(37,99,235,0.12)',
                                         color: 'var(--indigo)',
-                                        border: '1px solid rgba(245,158,11,0.25)',
+                                        border: '1px solid rgba(37,99,235,0.25)',
                                         padding: '3px 10px', borderRadius: '50px'
                                     }}>{t}</span>
                                 ))}

@@ -26,7 +26,7 @@ const SplashScreen = () => {
                     style={{
                         position: 'fixed',
                         inset: 0,
-                        background: '#0f172a',
+                        background: '#ffffff',
                         zIndex: 99999,
                         display: 'flex',
                         alignItems: 'center',
@@ -44,7 +44,7 @@ const SplashScreen = () => {
                         <span style={{
                             fontSize: '3.5rem',
                             fontWeight: 800,
-                            color: '#f1f5f9',
+                            color: '#0f172a',
                             fontFamily: 'Inter, sans-serif',
                             letterSpacing: '-0.04em',
                         }}>
@@ -57,7 +57,7 @@ const SplashScreen = () => {
                             style={{
                                 fontSize: '4rem',
                                 fontWeight: 800,
-                                background: 'linear-gradient(135deg, #f59e0b, #8b5cf6)',
+                                background: 'linear-gradient(135deg, #2563eb, #0ea5e9)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 backgroundClip: 'text',
@@ -74,7 +74,7 @@ const SplashScreen = () => {
                         transition={{ delay: 0.5, duration: 0.9, ease: 'easeInOut' }}
                         style={{
                             height: '2px',
-                            background: 'linear-gradient(90deg, #f59e0b, #8b5cf6)',
+                            background: 'linear-gradient(90deg, #2563eb, #0ea5e9)',
                             borderRadius: '2px',
                         }}
                     />

@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <nav id="header" className={scrolled ? 'scrolled' : ''} style={{
-      boxShadow: scrolled ? '0 4px 24px rgba(0,0,0,0.4)' : 'none',
+      boxShadow: scrolled ? '0 4px 24px rgba(15,23,42,0.1)' : 'none',
     }}>
       {/* Logo */}
       <div className="nav-logo">
