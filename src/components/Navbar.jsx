@@ -83,6 +83,11 @@ const Navbar = () => {
 
       {/* Right controls */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        {/* Available-for-work badge */}
+        <Link to="/contact" className="availability-badge" title="Open to freelance work">
+          <span className="availability-dot"></span>
+          <span className="availability-text">Available for work</span>
+        </Link>
         <div className="nav-menu-btn" onClick={toggleMenu}>
           <i className={`uil ${menuOpen ? 'uil-times' : 'uil-bars'}`}></i>
         </div>
