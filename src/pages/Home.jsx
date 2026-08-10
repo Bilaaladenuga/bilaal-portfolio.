@@ -53,13 +53,13 @@ const stagger = {
 const skills = [
     { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E', color: '#F7DF1E' },
     { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB', color: '#61DAFB' },
-    { name: 'Next.js 14', icon: 'https://cdn.simpleicons.org/nextdotjs/ffffff', color: '#ffffff' },
+    { name: 'Next.js 14', icon: 'https://cdn.simpleicons.org/nextdotjs/000000', color: '#000000' },
     { name: 'Tailwind CSS', icon: 'https://cdn.simpleicons.org/tailwindcss/06B6D4', color: '#06B6D4' },
-    { name: 'Framer Motion', icon: 'https://cdn.simpleicons.org/framer/ffffff', color: '#ffffff' },
+    { name: 'Framer Motion', icon: 'https://cdn.simpleicons.org/framer/000000', color: '#000000' },
     { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933', color: '#339933' },
     { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB', color: '#3776AB' },
     { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1', color: '#4169E1' },
-    { name: 'Power BI', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Microsoft_Power_BI_logo.svg', color: '#F2C811' },
+    { name: 'Power BI', icon: '/assets/powerbi.svg', color: '#F2C811' },
     { name: 'Git & CI/CD', icon: 'https://cdn.simpleicons.org/git/F05032', color: '#F05032' },
     { name: 'LangChain', icon: 'https://cdn.simpleicons.org/langchain/1C3C3C', color: '#1C9956' },
     { name: 'System Design', icon: 'https://cdn.simpleicons.org/diagramsdotnet/F08705', color: '#F08705' },
@@ -70,21 +70,21 @@ const projects = [
     {
         icon: 'uil-mobile-android',
         name: "Qalb Qur'an",
-        label: 'Mobile App for Community',
+        label: 'A Quran app built for my community',
         stack: 'React Native • Firebase',
         href: 'https://github.com/Bilaaladenuga/qalb-qur-an'
     },
     {
         icon: 'uil-robot',
         name: 'Bidmaj Chatbot',
-        label: 'AI Conversational Agent',
+        label: 'A chatbot that holds real conversations',
         stack: 'Python • NLP • API',
         href: 'https://github.com/Bilaaladenuga/Bidmaj-Chatbot-'
     },
     {
         icon: 'uil-image',
         name: 'AI Image Gen',
-        label: 'Generative Art Platform',
+        label: 'Type a prompt, get an image',
         stack: 'React • OpenAI • Node.js',
         href: 'https://github.com/Bilaaladenuga/AI-Image-generator-'
     },
@@ -114,15 +114,17 @@ const Home = () => {
                     </motion.div>
 
                     <motion.h1 variants={fadeUp} className="featured-name">
-                        I build AI-powered<br />
-                        systems for the<br />
-                        <span className="typedText"></span>
+                        I'm the<br />
+                        <span className="typedText"></span><br />
+                        who builds AI-powered<br />
+                        systems for the web.
                     </motion.h1>
 
                     <motion.p variants={fadeUp} className="featured-text-info">
-                        I engineer scalable, AI-powered web systems for the modern web —
-                        focused on high-performance architectures and intuitive interfaces.
-                        Co-Founder of&nbsp;<strong style={{ color: 'var(--indigo)' }}>MOBO Digital</strong>.
+                        I build web apps and AI tools that people actually enjoy using —
+                        fast, reliable, and simple to maintain. I'm the Co-Founder of&nbsp;
+                        <strong style={{ color: 'var(--indigo)' }}>MOBO Digital</strong>,
+                        where I help businesses turn rough ideas into real, working products.
                     </motion.p>
 
                     <motion.div variants={fadeUp} className="featured-text-btn">
@@ -192,7 +194,7 @@ const Home = () => {
             <section className="wrapper section" id="about">
                 <div className="top-header">
                     <h2>About Me</h2>
-                    <span>Bridging Business Logic &amp; Technical Excellence</span>
+                    <span>More than just writing code</span>
                 </div>
                 <div className="row">
                     <motion.div
@@ -203,17 +205,17 @@ const Home = () => {
                         className="col"
                     >
                         <div className="about-info">
-                            <h3>My Mission</h3>
+                            <h3>What I'm about</h3>
                             <p>
-                                I don't just write code — I build systems. My passion lies in
-                                dissecting complex business problems and architecting robust
-                                digital solutions. As the Co-Founder of <strong>MOBO Digital</strong> (est. 2025),
-                                I lead technical strategy to deliver products that are performant,
-                                scalable, and maintainable.
+                                I don't just write code — I build things that solve real problems.
+                                My favourite kind of work is taking a messy business idea and turning
+                                it into software people actually use. As Co-Founder of <strong>MOBO Digital</strong> (est. 2025),
+                                I lead the technical side of things: making sure everything we ship
+                                is fast, reliable, and easy to maintain long after launch.
                                 <br /><br />
-                                I specialise in <strong>Modern Web Development</strong> (React, Next.js) and{' '}
-                                <strong>Artificial Intelligence</strong> (LLM integration, automated workflows),
-                                ensuring my clients stay ahead of the curve.
+                                Day to day, that means working across <strong>Modern Web Development</strong> (React, Next.js)
+                                and <strong>Artificial Intelligence</strong> — LLM integrations, automated workflows,
+                                and tools that save people time and headaches.
                             </p>
                             <div className="about-btn">
                                 <Link to="/resume">
@@ -294,7 +296,7 @@ const Home = () => {
             <section className="wrapper section" id="projects">
                 <div className="top-header">
                     <h2>Selected Projects</h2>
-                    <span>Engineering Case Studies</span>
+                    <span>A few things I'm proud of</span>
                 </div>
                 <motion.div
                     variants={stagger}

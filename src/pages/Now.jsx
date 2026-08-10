@@ -5,27 +5,27 @@ const items = [
     {
         icon: 'uil-robot',
         title: 'Agentic AI Workflows',
-        body: 'Experimenting with autonomous AI agents and multi-step workflows using LangGraph and LangChain.',
+        body: 'Experimenting with autonomous AI agents and multi-step workflows — LangGraph and LangChain are my current playground.',
     },
     {
         icon: 'uil-briefcase-alt',
         title: 'Building MOBO Digital',
-        body: 'Growing the core engineering team and delivering scalable web solutions for early clients.',
+        body: 'Growing the engineering team at MOBO Digital and shipping real projects for our first clients.',
     },
     {
         icon: 'uil-code-branch',
         title: 'Next.js 14 Server Actions',
-        body: 'Refactoring and migrating legacy codebases to Next.js 14 App Router with Server Actions for better performance.',
+        body: 'Migrating older codebases to the Next.js 14 App Router with Server Actions — faster loads, cleaner code.',
     },
     {
         icon: 'uil-book-open',
         title: 'Reading: DDIA',
-        body: '"Designing Data-Intensive Applications" by Martin Kleppmann — diving deep into distributed systems fundamentals.',
+        body: '"Designing Data-Intensive Applications" by Martin Kleppmann — slowly working my way through the distributed systems classic.',
     },
     {
         icon: 'uil-chart-growth',
         title: 'System Architecture',
-        body: 'Deepening knowledge in scalable backend design patterns — queues, caching strategies, and API design.',
+        body: 'Learning scalable backend patterns — queues, caching, and API design that holds up under real traffic.',
     },
 ];
 

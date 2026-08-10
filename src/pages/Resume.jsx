@@ -65,12 +65,13 @@ const Resume = () => {
                 {/* Summary */}
                 <ResumeSection title="Summary">
                     <p style={{ color: 'var(--text-muted)', margin: 0 }}>
-                        Passionate Technical Founder and Full-Stack Developer with 5+ years building
+                        Technical Founder and Full-Stack Developer with 5+ years building
                         web applications and AI-powered systems. Co-Founder of MOBO Digital (2025),
-                        where I lead engineering strategy and product delivery. Expertise spans modern
-                        JavaScript frameworks (React, Next.js), backend systems (Node.js, Python,
-                        PostgreSQL), and AI integrations (OpenAI, LangChain). Driven by the
-                        intersection of business logic and scalable technology.
+                        where I lead the engineering side — architecture, delivery, and making sure
+                        the tech actually solves the problem at hand. I work across modern JavaScript
+                        frameworks (React, Next.js), backend systems (Node.js, Python, PostgreSQL),
+                        and AI integrations (OpenAI, LangChain) — and I care as much about the
+                        business goal as I do about the code that gets us there.
                     </p>
                 </ResumeSection>
 
@@ -81,10 +82,10 @@ const Resume = () => {
                         org="MOBO Digital"
                         period="2025 – Present"
                         bullets={[
-                            'Founded and lead the engineering function of a digital agency delivering full-stack web solutions.',
-                            'Designed scalable SaaS architectures using Next.js 14, Node.js, and PostgreSQL.',
-                            'Integrated AI workflows (OpenAI, LangChain) to automate client business processes.',
-                            'Led a team of developers, conducting code reviews and maintaining engineering standards.',
+                            'Co-founded the agency and lead the engineering team — from architecture to shipped products.',
+                            'Designed the architecture behind our SaaS builds: Next.js 14, Node.js, and PostgreSQL.',
+                            'Built AI workflows (OpenAI, LangChain) that automate the tedious parts of client processes.',
+                            'Run code reviews and set engineering standards across the dev team.',
                         ]}
                     />
                     <ResumeEntry
@@ -107,7 +108,7 @@ const Resume = () => {
                         org="React Native · Firebase"
                         period=""
                         bullets={[
-                            "A mobile app for Muslim women supporting Qur'an memorisation, spiritual growth, and community connection.",
+                            "A mobile app for Muslim women to memorise the Qur'an, grow spiritually, and stay close to their community.",
                         ]}
                     />
                     <ResumeEntry
@@ -115,7 +116,7 @@ const Resume = () => {
                         org="Python · NLP · REST API"
                         period=""
                         bullets={[
-                            'AI-powered conversational agent handling natural language queries with intent classification and dynamic responses.',
+                            'A chatbot that understands everyday questions and answers like a real conversation.',
                         ]}
                     />
                     <ResumeEntry
@@ -123,7 +124,7 @@ const Resume = () => {
                         org="React · OpenAI DALL-E · Node.js"
                         period=""
                         bullets={[
-                            "Web app that generates images from text prompts using OpenAI's image generation API with a React frontend.",
+                            "Type a prompt, get an image — text into pictures with OpenAI's image models.",
                         ]}
                     />
                     <ResumeEntry
@@ -131,7 +132,7 @@ const Resume = () => {
                         org="JavaScript · Chrome Extensions API"
                         period=""
                         bullets={[
-                            'Chrome extension for annotating, highlighting, and screenshotting web pages for productivity and research.',
+                            'A Chrome extension for highlighting, annotating, and screenshotting web pages — built to make research less painful.',
                         ]}
                     />
                 </ResumeSection>
@@ -158,12 +159,12 @@ const Resume = () => {
                         {[
                             { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
                             { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
-                            { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/ffffff' },
+                            { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/000000' },
                             { name: 'Tailwind', icon: 'https://cdn.simpleicons.org/tailwindcss/06B6D4' },
                             { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
                             { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB' },
                             { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
-                            { name: 'Power BI', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Microsoft_Power_BI_logo.svg' },
+                            { name: 'Power BI', icon: '/assets/powerbi.svg' },
                             { name: 'Git', icon: 'https://cdn.simpleicons.org/git/F05032' },
                             { name: 'Firebase', icon: 'https://cdn.simpleicons.org/firebase/FFCA28' },
                         ].map(s => (

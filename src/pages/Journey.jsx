@@ -5,31 +5,31 @@ const phases = [
     {
         year: '2020',
         title: 'The Fundamentals',
-        body: 'Started with HTML, CSS, and JavaScript. Built static sites and learned the core of the web — understanding how browsers render content and how to craft clean, semantic markup.',
+        body: 'Started with HTML, CSS, and JavaScript. Built my first static sites, figured out how browsers actually render pages, and learned to write clean markup that actually makes sense.',
         icon: 'uil-code-branch',
     },
     {
         year: '2021 – 2022',
         title: 'Moving Beyond Static Pages',
-        body: 'Mastered React and Next.js. Started building dynamic, data-driven applications and developed a deep understanding of state management, component design, and frontend architecture.',
+        body: 'Got hooked on React and Next.js. Moved from static pages to real, data-driven apps — picking up state management, component design, and frontend architecture along the way.',
         icon: 'uil-react',
     },
     {
         year: '2023 – 2024',
         title: 'Backend, AI & Full Stack',
-        body: 'Expanded into Node.js, Python, PostgreSQL, and AI integrations. Began working with OpenAI APIs, building chatbots, generative tools, and exploring automated workflows with LangChain.',
+        body: 'Went full-stack — Node.js, Python, PostgreSQL. Then I started playing with AI: OpenAI APIs, chatbots, image generators, and automated workflows with LangChain.',
         icon: 'uil-robot',
     },
     {
         year: '2025',
         title: 'Co-Founding MOBO Digital',
-        body: 'Launched MOBO Digital — an agency building scalable web solutions for clients. Focused on business logic, technical leadership, and delivering real-world impact through software.',
+        body: 'Co-founded MOBO Digital, an agency that builds web solutions for real clients. My focus shifted to business logic, leading the technical side, and shipping software that actually makes a difference.',
         icon: 'uil-rocket',
     },
     {
         year: 'Now',
         title: 'AI Systems & Architecture',
-        body: 'Deepening expertise in LLM agents, backend system architecture, and building complex end-to-end AI-powered products. Continuously pushing the boundaries of what\'s possible.',
+        body: 'Diving deeper into LLM agents, backend architecture, and end-to-end AI products. There\'s always a new problem worth solving.',
         icon: 'uil-chart-growth',
     },
 ];
@@ -44,7 +44,7 @@ const Journey = () => {
         >
             <div className="top-header">
                 <h1>My Journey</h1>
-                <span>Strategic Timeline</span>
+                <span>How I got here</span>
             </div>
 
             <div className="timeline">

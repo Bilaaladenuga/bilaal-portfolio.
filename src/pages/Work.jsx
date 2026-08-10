@@ -25,7 +25,7 @@ const projects = [
         icon: 'uil-mobile-android',
         color: '#2563eb',
         name: "Qalb Qur'an",
-        desc: "A beautiful mobile app for Muslim women to support Quran memorisation, spiritual growth, and community connection.",
+        desc: "A mobile app for Muslim women to memorise the Quran, grow spiritually, and stay close to their community.",
         stack: ['React Native', 'Firebase'],
         href: 'https://github.com/Bilaaladenuga/qalb-qur-an'
     },
@@ -33,7 +33,7 @@ const projects = [
         icon: 'uil-robot',
         color: '#6366f1',
         name: 'Bidmaj Chatbot',
-        desc: 'An intelligent conversational agent handling natural language queries with proficiency in NLP and backend integration.',
+        desc: 'A chatbot that understands everyday questions and answers like a real conversation — NLP on a Python backend.',
         stack: ['Python', 'NLP', 'API'],
         href: 'https://github.com/Bilaaladenuga/Bidmaj-Chatbot-'
     },
@@ -41,7 +41,7 @@ const projects = [
         icon: 'uil-image',
         color: '#06b6d4',
         name: 'AI Image Gen',
-        desc: 'A web application leveraging generative AI to create images from text prompts, integrated with modern AI APIs.',
+        desc: 'Type a prompt, get an image — text into pictures with OpenAI\'s image models.',
         stack: ['React', 'OpenAI', 'Node.js'],
         href: 'https://github.com/Bilaaladenuga/AI-Image-generator-'
     },
@@ -49,7 +49,7 @@ const projects = [
         icon: 'uil-edit',
         color: '#f59e0b',
         name: 'AnnoTater',
-        desc: 'A productive webpage annotation and screenshot Chrome extension for highlighting, commenting, and saving web content.',
+        desc: 'A Chrome extension for highlighting, annotating, and screenshotting any webpage — built to make research less painful.',
         stack: ['JavaScript', 'Chrome API'],
         href: 'https://github.com/Bilaaladenuga/AnnoTater'
     },
@@ -57,7 +57,7 @@ const projects = [
         icon: 'uil-globe',
         color: '#10b981',
         name: 'Bidmaj Translator',
-        desc: 'A sophisticated translation tool bridging communication gaps with real-time multilingual accuracy.',
+        desc: 'Real-time translation across languages — built to make conversations easier across borders.',
         stack: ['Python', 'Google Translate API'],
         href: 'https://github.com/Bilaaladenuga/Bidmaj-Language-Translator-'
     },
@@ -65,7 +65,7 @@ const projects = [
         icon: 'uil-chess',
         color: '#ec4899',
         name: 'Chess Master',
-        desc: 'A fully functional digital chess game implementing standard rules, move validation, and game logic.',
+        desc: 'A full chess game in Python — real rules, move validation, and a working opponent to play.',
         stack: ['Python', 'Pygame'],
         href: 'https://github.com/Bilaaladenuga/Chess-master'
     },
@@ -73,7 +73,7 @@ const projects = [
         icon: 'uil-cloud-sun',
         color: '#3b82f6',
         name: 'Weather App',
-        desc: 'A real-time weather tracking application fetching live meteorological data from external APIs.',
+        desc: 'Live weather for anywhere — pulls real forecast data from a weather API.',
         stack: ['JavaScript', 'Weather API'],
         href: 'https://github.com/Bilaaladenuga/weather-api-fetcher'
     },
@@ -95,7 +95,7 @@ const Work = () => {
         >
             <div className="top-header">
                 <h1>Work</h1>
-                <span>Case Studies &amp; Projects</span>
+                <span>Things I've built</span>
             </div>
 
             {/* ── Category filter ── */}
