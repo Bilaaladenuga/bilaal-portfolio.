@@ -2,8 +2,28 @@ import { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const GITHUB_USERNAME = 'Bilaaladenuga';
+
+// Curated fallback descriptions for repos without one on GitHub.
+// Used when the GitHub API returns no description, so every card is informative.
+const CURATED_DESCRIPTIONS = {
+  'AI-Image-generator-': 'A web application that generates images from text prompts using generative AI APIs, with a clean client-side interface.',
+  'AlFatwa': 'An Islamic knowledge and Q&A platform designed to make authentic religious guidance accessible online.',
+  'AnnoTater': 'A productive webpage annotation and screenshot Chrome extension for highlighting, commenting, and saving web content.',
+  'Bidmaj-Chatbot-': 'An intelligent conversational agent handling natural language queries with NLP and backend integration.',
+  'Bidmaj-Language-Translator-': 'A sophisticated translation tool bridging communication gaps with real-time multilingual accuracy.',
+  'BIDMAJ-TEXTMORPH-': 'A user-friendly text-to-speech converter that transforms written text into natural, human-like speech.',
+  'bilaal-portfolio.': 'My personal portfolio — a React + Vite site showcasing my projects, journey, and experience.',
+  'Chess-master': 'A fully functional digital chess game implementing standard rules, move validation, and game logic.',
+  'My-browser-': 'A custom web browser built in Python, exploring browser fundamentals and GUI automation.',
+  'My-Portfolio-': 'An earlier version of my personal portfolio, preserved as a milestone from my web development journey.',
+  'pizza-webpage-': 'A polished, responsive landing page for a pizza restaurant with ordering-focused UI.',
+  'ResuCraft': 'An AI-powered resume builder for creating polished, ATS-friendly resumes with industry-specific templates and Gemini content assistance.',
+  'TIC-TAC-TOE': 'A classic Tic-Tac-Toe game with a clean, interactive board — a fun frontend exercise in game logic.',
+  'weather-api-fetcher': 'A real-time weather tracking application fetching live meteorological data from external APIs.',
+  'Weather-App-': 'A modern weather app with a Tailwind-styled interface, bundling live forecast data from weather APIs.',
+};
 const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`;
-const CACHE_KEY = 'github-repos-cache';
+const CACHE_KEY = 'github-repos-cache-v2';
 const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
 
 // Language → badge color
@@ -111,7 +131,7 @@ const GitHubRepos = () => {
           .map((r) => ({
             id: r.id,
             name: r.name,
-            description: r.description || 'No description provided.',
+            description: r.description || CURATED_DESCRIPTIONS[r.name] || 'No description provided.',
             html_url: r.html_url,
             homepage: r.homepage,
             language: r.language,

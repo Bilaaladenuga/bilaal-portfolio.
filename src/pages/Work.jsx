@@ -14,7 +14,7 @@ const stagger = {
 const projects = [
     {
         icon: 'uil-mobile-android',
-        color: '#6366f1',
+        color: '#f59e0b',
         name: "Qalb Qur'an",
         desc: "A beautiful mobile app for Muslim women to support Quran memorisation, spiritual growth, and community connection.",
         stack: ['React Native', 'Firebase'],
@@ -30,7 +30,7 @@ const projects = [
     },
     {
         icon: 'uil-image',
-        color: '#06b6d4',
+        color: '#fbbf24',
         name: 'AI Image Gen',
         desc: 'A web application leveraging generative AI to create images from text prompts, integrated with modern AI APIs.',
         stack: ['React', 'OpenAI', 'Node.js'],
@@ -108,7 +108,7 @@ const Work = () => {
                         }}
                         whileHover={{
                             y: -8,
-                            boxShadow: '0 20px 50px rgba(0,0,0,0.35), 0 0 0 1px rgba(99,102,241,0.3)',
+                            boxShadow: '0 20px 50px rgba(0,0,0,0.35), 0 0 0 1px rgba(245,158,11,0.3)',
                         }}
                     >
                         <div style={{
@@ -131,9 +131,9 @@ const Work = () => {
                             {p.stack.map(t => (
                                 <span key={t} style={{
                                     fontSize: '0.75rem', fontWeight: 600,
-                                    background: 'rgba(99,102,241,0.1)',
+                                    background: 'rgba(245,158,11,0.1)',
                                     color: 'var(--indigo)',
-                                    border: '1px solid rgba(99,102,241,0.2)',
+                                    border: '1px solid rgba(245,158,11,0.2)',
                                     padding: '3px 10px', borderRadius: '50px'
                                 }}>{t}</span>
                             ))}

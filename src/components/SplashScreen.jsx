@@ -57,7 +57,7 @@ const SplashScreen = () => {
                             style={{
                                 fontSize: '4rem',
                                 fontWeight: 800,
-                                background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+                                background: 'linear-gradient(135deg, #f59e0b, #8b5cf6)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 backgroundClip: 'text',
@@ -74,7 +74,7 @@ const SplashScreen = () => {
                         transition={{ delay: 0.5, duration: 0.9, ease: 'easeInOut' }}
                         style={{
                             height: '2px',
-                            background: 'linear-gradient(90deg, #6366f1, #8b5cf6)',
+                            background: 'linear-gradient(90deg, #f59e0b, #8b5cf6)',
                             borderRadius: '2px',
                         }}
                     />
