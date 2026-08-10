@@ -1,8 +1,44 @@
 
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Typed from 'typed.js';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
+
+// Animated counter that counts up when scrolled into view
+const Counter = ({ to, suffix = '', duration = 1.6 }) => {
+    const ref = useRef(null);
+    const inView = useInView(ref, { once: true, margin: '-40px' });
+    const [value, setValue] = useState(0);
+
+    useEffect(() => {
+        if (!inView) return;
+        let raf;
+        const start = performance.now();
+        const tick = (now) => {
+            const progress = Math.min((now - start) / (duration * 1000), 1);
+            // easeOutCubic for a satisfying deceleration
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setValue(Math.round(eased * to));
+            if (progress < 1) raf = requestAnimationFrame(tick);
+        };
+        raf = requestAnimationFrame(tick);
+        return () => cancelAnimationFrame(raf);
+    }, [inView, to, duration]);
+
+    return (
+        <span ref={ref} className="stat-number">
+            {value}
+            <span className="stat-suffix">{suffix}</span>
+        </span>
+    );
+};
+
+const stats = [
+    { to: 15, suffix: '+', label: 'GitHub Repositories' },
+    { to: 10, suffix: '+', label: 'Projects Built' },
+    { to: 5, suffix: '+', label: 'Years Experience' },
+    { to: 3, suffix: '+', label: 'AI-Powered Products' },
+];
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -77,11 +113,11 @@ const Home = () => {
                         </span>
                     </motion.div>
 
-                    <motion.div variants={fadeUp} className="featured-name">
+                    <motion.h1 variants={fadeUp} className="featured-name">
                         I build AI-powered<br />
                         systems for the<br />
                         <span className="typedText"></span>
-                    </motion.div>
+                    </motion.h1>
 
                     <motion.p variants={fadeUp} className="featured-text-info">
                         I engineer scalable, AI-powered web systems for the modern web —
@@ -135,10 +171,27 @@ const Home = () => {
                 </motion.div>
             </section>
 
+            {/* ── STATS ── */}
+            <section className="wrapper stats-strip" aria-label="Highlights">
+                {stats.map((s, i) => (
+                    <motion.div
+                        key={s.label}
+                        className="stat-item"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: i * 0.1 }}
+                    >
+                        <Counter to={s.to} suffix={s.suffix} />
+                        <span className="stat-label">{s.label}</span>
+                    </motion.div>
+                ))}
+            </section>
+
             {/* ── ABOUT ── */}
             <section className="wrapper section" id="about">
                 <div className="top-header">
-                    <h1>About Me</h1>
+                    <h2>About Me</h2>
                     <span>Bridging Business Logic &amp; Technical Excellence</span>
                 </div>
                 <div className="row">
@@ -240,7 +293,7 @@ const Home = () => {
             {/* ── SELECTED PROJECTS ── */}
             <section className="wrapper section" id="projects">
                 <div className="top-header">
-                    <h1>Selected Projects</h1>
+                    <h2>Selected Projects</h2>
                     <span>Engineering Case Studies</span>
                 </div>
                 <motion.div

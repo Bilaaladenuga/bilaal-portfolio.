@@ -20,7 +20,7 @@ const NotFound = () => {
                 padding: '40px',
             }}
         >
-            <motion.div
+            <motion.h1
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 200, delay: 0.1 }}
@@ -37,7 +37,7 @@ const NotFound = () => {
                 }}
             >
                 404
-            </motion.div>
+            </motion.h1>
 
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-primary)' }}>
                 Page Not Found

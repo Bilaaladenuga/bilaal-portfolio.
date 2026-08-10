@@ -1,14 +1,23 @@
 
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import GitHubRepos from '../components/GitHubRepos';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
 };
-const stagger = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+
+const CATEGORIES = ['All', 'AI', 'Mobile', 'Web', 'Tools', 'Games'];
+
+const projectFilters = {
+    "Qalb Qur'an": 'Mobile',
+    'Bidmaj Chatbot': 'AI',
+    'AI Image Gen': 'AI',
+    'AnnoTater': 'Tools',
+    'Bidmaj Translator': 'AI',
+    'Chess Master': 'Games',
+    'Weather App': 'Web',
 };
 
 const projects = [
@@ -71,6 +80,12 @@ const projects = [
 ];
 
 const Work = () => {
+    const [filter, setFilter] = useState('All');
+
+    const visible = filter === 'All'
+        ? projects
+        : projects.filter(p => projectFilters[p.name] === filter);
+
     return (
         <motion.section
             initial="hidden"
@@ -83,18 +98,37 @@ const Work = () => {
                 <span>Case Studies &amp; Projects</span>
             </div>
 
+            {/* ── Category filter ── */}
+            <motion.div variants={fadeUp} className="work-filters" role="group" aria-label="Filter projects by category">
+                {CATEGORIES.map(cat => (
+                    <button
+                        key={cat}
+                        className={`work-chip ${filter === cat ? 'work-chip-active' : ''}`}
+                        aria-pressed={filter === cat}
+                        onClick={() => setFilter(cat)}
+                    >
+                        {cat}
+                    </button>
+                ))}
+            </motion.div>
+
             <motion.div
-                variants={stagger}
+                layout
                 style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                     gap: '24px',
                 }}
             >
-                {projects.map(p => (
+                <AnimatePresence mode="popLayout">
+                {visible.map(p => (
                     <motion.div
                         key={p.name}
                         variants={fadeUp}
+                        initial="hidden"
+                        animate="visible"
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        layout
                         style={{
                             background: 'var(--bg-card)',
                             border: '1px solid var(--border)',
@@ -121,7 +155,7 @@ const Work = () => {
                             <i className={`uil ${p.icon}`} style={{ fontSize: '1.6rem', color: p.color }}></i>
                         </div>
 
-                        <h3 style={{ marginBottom: 0 }}>{p.name}</h3>
+                        <h2 style={{ marginBottom: 0, fontSize: '1.2rem', fontWeight: 600 }}>{p.name}</h2>
 
                         <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.65', flexGrow: 1 }}>
                             {p.desc}
@@ -154,6 +188,7 @@ const Work = () => {
                         </a>
                     </motion.div>
                 ))}
+                </AnimatePresence>
             </motion.div>
 
             {/* ── ALL GITHUB REPOSITORIES ── */}

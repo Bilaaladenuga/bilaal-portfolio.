@@ -56,7 +56,7 @@ const Now = () => {
                             <i className={`uil ${item.icon}`}></i>
                         </div>
                         <div className="now-text">
-                            <h4>{item.title}</h4>
+                            <h2>{item.title}</h2>
                             <p>{item.body}</p>
                         </div>
                     </motion.div>

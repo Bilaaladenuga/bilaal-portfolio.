@@ -194,7 +194,7 @@ const GitHubRepos = () => {
       style={{ paddingTop: '2em' }}
     >
       <motion.div variants={fadeUp} className="top-header">
-        <h1>GitHub Repositories</h1>
+        <h2>GitHub Repositories</h2>
         <span>All public projects — pulled live from my GitHub</span>
       </motion.div>
 
