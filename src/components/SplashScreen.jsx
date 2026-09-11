@@ -6,7 +6,6 @@ const SplashScreen = () => {
     const [show, setShow] = useState(true);
 
     useEffect(() => {
-        // Only show splash on first visit per session
         const seen = sessionStorage.getItem('splashSeen');
         if (seen) { setShow(false); return; }
         const timer = setTimeout(() => {
@@ -42,11 +41,11 @@ const SplashScreen = () => {
                         style={{ display: 'flex', alignItems: 'baseline', gap: '2px' }}
                     >
                         <span style={{
-                            fontSize: '3.5rem',
-                            fontWeight: 800,
-                            color: '#0f172a',
+                            fontSize: '4rem',
+                            fontWeight: 900,
+                            color: '#0d0d0d',
                             fontFamily: 'Inter, sans-serif',
-                            letterSpacing: '-0.04em',
+                            letterSpacing: '-0.05em',
                         }}>
                             bilaal
                         </span>
@@ -55,12 +54,9 @@ const SplashScreen = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3, duration: 0.3 }}
                             style={{
-                                fontSize: '4rem',
-                                fontWeight: 800,
-                                background: 'linear-gradient(135deg, #2563eb, #0ea5e9)',
-                                WebkitBackgroundClip: 'text',
-                                WebkitTextFillColor: 'transparent',
-                                backgroundClip: 'text',
+                                fontSize: '4.5rem',
+                                fontWeight: 900,
+                                color: '#8a05ff',
                                 lineHeight: 1,
                             }}
                         >
@@ -73,9 +69,9 @@ const SplashScreen = () => {
                         animate={{ width: '120px' }}
                         transition={{ delay: 0.5, duration: 0.9, ease: 'easeInOut' }}
                         style={{
-                            height: '2px',
-                            background: 'linear-gradient(90deg, #2563eb, #0ea5e9)',
-                            borderRadius: '2px',
+                            height: '3px',
+                            background: 'linear-gradient(to right, #8a05ff, #d67f2e)',
+                            borderRadius: '937px',
                         }}
                     />
                 </motion.div>

@@ -9,40 +9,21 @@ const NotFound = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '80vh',
-                textAlign: 'center',
-                gap: '24px',
-                padding: '40px',
-            }}
+            className="not-found-page"
         >
-            <motion.h1
+            <motion.div
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 200, delay: 0.1 }}
-                style={{
-                    fontSize: '8rem',
-                    fontWeight: 800,
-                    background: 'linear-gradient(135deg, #2563eb, #0ea5e9)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    lineHeight: 1,
-                    letterSpacing: '-0.05em',
-                    fontFamily: 'Inter, sans-serif',
-                }}
+                className="not-found-number"
             >
                 404
-            </motion.h1>
+            </motion.div>
 
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-obsidian)', letterSpacing: '-0.02em' }}>
                 Page Not Found
             </h2>
-            <p style={{ color: 'var(--text-muted)', maxWidth: '400px', lineHeight: 1.7 }}>
+            <p style={{ color: 'var(--color-smoke)', maxWidth: '400px', lineHeight: 1.7 }}>
                 Looks like this page doesn't exist — or it moved. Head back home and let's get you sorted.
             </p>
 

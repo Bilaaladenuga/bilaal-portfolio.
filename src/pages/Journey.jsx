@@ -43,27 +43,32 @@ const Journey = () => {
             className="wrapper section"
         >
             <div className="top-header">
-                <h1>My Journey</h1>
-                <span>How I got here</span>
+                <div className="section-label">Journey</div>
+                <h1 className="section-title">How I Got Here</h1>
+                <p className="section-subtitle">A timeline of my career and learning path.</p>
             </div>
 
             <div className="timeline">
                 {phases.map((p, i) => (
                     <motion.div
                         key={p.year}
-                        className="timeline-item"
+                        className="timeline-entry"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: i * 0.05 }}
                         viewport={{ once: true }}
                     >
-                        <div className="timeline-dot"></div>
-                        <div className="timeline-year">
-                            <i className={`uil ${p.icon}`} style={{ marginRight: '6px', fontSize: '1.4rem', verticalAlign: 'middle' }}></i>
-                            {p.year}
+                        <div className="timeline-marker">
+                            <div className="timeline-dot"></div>
                         </div>
-                        <div className="timeline-title">{p.title}</div>
-                        <div className="timeline-body">{p.body}</div>
+                        <div>
+                            <div className="timeline-year">
+                                <i className={`uil ${p.icon}`} style={{ marginRight: '8px', fontSize: '1.2rem', verticalAlign: 'middle' }}></i>
+                                {p.year}
+                            </div>
+                            <div className="timeline-title">{p.title}</div>
+                            <div className="timeline-body">{p.body}</div>
+                        </div>
                     </motion.div>
                 ))}
             </div>

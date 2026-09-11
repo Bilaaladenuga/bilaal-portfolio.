@@ -38,15 +38,16 @@ const Now = () => {
             className="wrapper section"
         >
             <div className="top-header">
-                <h1>Now</h1>
-                <span>What I'm focused on currently</span>
+                <div className="section-label">Now</div>
+                <h1 className="section-title">What I'm Focused On</h1>
+                <p className="section-subtitle">Current projects, learning, and interests.</p>
             </div>
 
-            <div className="now-list">
+            <div className="now-grid">
                 {items.map((item, i) => (
                     <motion.div
                         key={item.title}
-                        className="now-item"
+                        className="now-entry"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.4, delay: i * 0.08 }}
@@ -55,8 +56,8 @@ const Now = () => {
                         <div className="now-icon">
                             <i className={`uil ${item.icon}`}></i>
                         </div>
-                        <div className="now-text">
-                            <h2>{item.title}</h2>
+                        <div className="now-content">
+                            <h3>{item.title}</h3>
                             <p>{item.body}</p>
                         </div>
                     </motion.div>

@@ -6,7 +6,7 @@ const EMAIL = 'adenugabilaal75@gmail.com';
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [status, setStatus] = useState('idle'); // idle | sending | success | error
+    const [status, setStatus] = useState('idle');
     const [copied, setCopied] = useState(false);
 
     const copyEmail = () => {
@@ -49,60 +49,58 @@ const Contact = () => {
             id="contact"
         >
             <div className="top-header">
-                <h1>Get in Touch</h1>
-                <span>Have a project in mind? Let's build something great.</span>
+                <div className="section-label">Contact</div>
+                <h1 className="section-title">Get in Touch</h1>
+                <p className="section-subtitle">Have a project in mind? Let's build something great.</p>
             </div>
 
-            <div className="row">
+            <div className="contact-grid">
                 {/* Left: Contact Info */}
-                <div className="col">
-                    <div className="contact-info">
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                >
+                    <div className="contact-info-card">
                         <h2>Find Me <i className="uil uil-corner-right-down"></i></h2>
 
-                        {/* Clickable email with copy toast */}
-                        <div style={{ position: 'relative', display: 'inline-block' }}>
-                            <p
-                                onClick={copyEmail}
-                                title="Click to copy email"
-                                style={{ cursor: 'pointer', userSelect: 'none', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}
-                            >
-                                <i className="uil uil-envelope"></i>
-                                {EMAIL}
-                                <span style={{ fontSize: '0.75rem', color: 'var(--indigo)', fontWeight: 600 }}>
-                                    {copied ? '✓ Copied!' : 'click to copy'}
-                                </span>
-                            </p>
+                        <div className="contact-detail" onClick={copyEmail} style={{ cursor: 'pointer' }}>
+                            <i className="uil uil-envelope"></i>
+                            <span>{EMAIL}</span>
+                            <span style={{ fontSize: '0.75rem', color: 'var(--color-plasma-violet)', fontWeight: 500, marginLeft: 'auto' }}>
+                                {copied ? '✓ Copied!' : 'copy'}
+                            </span>
                         </div>
 
-                        <p>
+                        <div className="contact-detail">
                             <i className="uil uil-phone"></i>
-                            +234 70 7817 8909
-                        </p>
+                            <span>+234 70 7817 8909</span>
+                        </div>
 
-                        <div className="contact-social">
-                            <div className="icon">
-                                <a href="https://www.instagram.com/adenugabilaal/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
-                                    <i className="uil uil-instagram"></i>
-                                </a>
-                            </div>
-                            <div className="icon">
-                                <a href="https://ng.linkedin.com/in/adenuga-bilaal" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
-                                    <i className="uil uil-linkedin-alt"></i>
-                                </a>
-                            </div>
-                            <div className="icon">
-                                <a href="https://github.com/Bilaaladenuga" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
-                                    <i className="uil uil-github-alt"></i>
-                                </a>
-                            </div>
+                        <div className="contact-social-row">
+                            <a href="https://www.instagram.com/adenugabilaal/" target="_blank" rel="noopener noreferrer" className="social-link">
+                                <i className="uil uil-instagram"></i>
+                            </a>
+                            <a href="https://ng.linkedin.com/in/adenuga-bilaal" target="_blank" rel="noopener noreferrer" className="social-link">
+                                <i className="uil uil-linkedin-alt"></i>
+                            </a>
+                            <a href="https://github.com/Bilaaladenuga" target="_blank" rel="noopener noreferrer" className="social-link">
+                                <i className="uil uil-github-alt"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right: Form */}
-                <div className="col">
-                    <form className="form-control" onSubmit={handleSubmit}>
-                        <div className="form-inputs">
+                <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                >
+                    <form className="form-group" onSubmit={handleSubmit}>
+                        <div className="form-row">
                             <input
                                 type="text"
                                 name="name"
@@ -129,9 +127,9 @@ const Contact = () => {
                             onChange={handleChange}
                             required
                         />
-                        <div className="form-button">
+                        <div className="form-submit">
                             <button
-                                className="btn"
+                                className="btn btn-primary"
                                 type="submit"
                                 disabled={status === 'sending'}
                                 style={{ opacity: status === 'sending' ? 0.7 : 1 }}
@@ -140,17 +138,17 @@ const Contact = () => {
                             </button>
                         </div>
                         {status === 'success' && (
-                            <p style={{ color: '#22c55e', marginTop: '12px', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '6px' }}>
+                            <p style={{ color: '#006d4c', marginTop: '12px', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '6px' }}>
                                 <i className="uil uil-check-circle"></i> Message sent! I'll get back to you soon.
                             </p>
                         )}
                         {status === 'error' && (
-                            <p style={{ color: '#ef4444', marginTop: '12px', fontWeight: 500 }}>
+                            <p style={{ color: '#e96770', marginTop: '12px', fontWeight: 500 }}>
                                 Something went wrong. Please try again or email me directly.
                             </p>
                         )}
                     </form>
-                </div>
+                </motion.div>
             </div>
         </motion.section>
     );

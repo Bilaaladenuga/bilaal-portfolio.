@@ -8,36 +8,14 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const [activeSection, setActiveSection] = useState('');
-
   const toggleMenu = () => setMenuOpen(prev => !prev);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-
-      // Scroll spy logic for Home page
-      if (location.pathname === '/') {
-        const sections = ['home', 'about', 'projects'];
-        for (const section of sections) {
-          const element = document.getElementById(section);
-          if (element) {
-            const rect = element.getBoundingClientRect();
-            if (rect.top <= 100 && rect.bottom >= 100) {
-              setActiveSection(section);
-              break;
-            }
-          }
-        }
-      } else {
-        setActiveSection('');
-      }
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [location.pathname]);
+  }, []);
 
-  // Close menu on route change
   useEffect(() => { setMenuOpen(false); }, [location]);
 
   const isActive = (path) => {
@@ -46,10 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav id="header" className={scrolled ? 'scrolled' : ''} style={{
-      boxShadow: scrolled ? '0 4px 24px rgba(15,23,42,0.1)' : 'none',
-    }}>
-      {/* Logo */}
+    <nav id="header" className={scrolled ? 'scrolled' : ''}>
       <div className="nav-logo">
         <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'baseline', gap: '1px' }}>
           <p className="nav-name">bilaal</p>
@@ -57,7 +32,6 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Desktop Nav */}
       <div className={`nav-menu ${menuOpen ? 'responsive' : ''}`} id="myNavMenu">
         <ul className="nav_menu_list">
           {[
@@ -69,11 +43,7 @@ const Navbar = () => {
             ['/resume', 'Resume']
           ].map(([path, label]) => (
             <li key={path} className="nav_list">
-              <Link
-                to={path}
-                className={`nav-link ${isActive(path)}`}
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link to={path} className={`nav-link ${isActive(path)}`} onClick={() => setMenuOpen(false)}>
                 {label}
               </Link>
             </li>
@@ -81,9 +51,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Right controls */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        {/* Available-for-work badge */}
         <Link to="/contact" className="availability-badge" title="Open to freelance work">
           <span className="availability-dot"></span>
           <span className="availability-text">Available for work</span>

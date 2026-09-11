@@ -23,7 +23,6 @@ const projectFilters = {
 const projects = [
     {
         icon: 'uil-mobile-android',
-        color: '#2563eb',
         name: "Qalb Qur'an",
         desc: "A mobile app for Muslim women to memorise the Quran, grow spiritually, and stay close to their community.",
         stack: ['React Native', 'Firebase'],
@@ -31,7 +30,6 @@ const projects = [
     },
     {
         icon: 'uil-robot',
-        color: '#6366f1',
         name: 'Bidmaj Chatbot',
         desc: 'A chatbot that understands everyday questions and answers like a real conversation — NLP on a Python backend.',
         stack: ['Python', 'NLP', 'API'],
@@ -39,7 +37,6 @@ const projects = [
     },
     {
         icon: 'uil-image',
-        color: '#06b6d4',
         name: 'AI Image Gen',
         desc: 'Type a prompt, get an image — text into pictures with OpenAI\'s image models.',
         stack: ['React', 'OpenAI', 'Node.js'],
@@ -47,7 +44,6 @@ const projects = [
     },
     {
         icon: 'uil-edit',
-        color: '#f59e0b',
         name: 'AnnoTater',
         desc: 'A Chrome extension for highlighting, annotating, and screenshotting any webpage — built to make research less painful.',
         stack: ['JavaScript', 'Chrome API'],
@@ -55,7 +51,6 @@ const projects = [
     },
     {
         icon: 'uil-globe',
-        color: '#10b981',
         name: 'Bidmaj Translator',
         desc: 'Real-time translation across languages — built to make conversations easier across borders.',
         stack: ['Python', 'Google Translate API'],
@@ -63,7 +58,6 @@ const projects = [
     },
     {
         icon: 'uil-chess',
-        color: '#ec4899',
         name: 'Chess Master',
         desc: 'A full chess game in Python — real rules, move validation, and a working opponent to play.',
         stack: ['Python', 'Pygame'],
@@ -71,7 +65,6 @@ const projects = [
     },
     {
         icon: 'uil-cloud-sun',
-        color: '#3b82f6',
         name: 'Weather App',
         desc: 'Live weather for anywhere — pulls real forecast data from a weather API.',
         stack: ['JavaScript', 'Weather API'],
@@ -94,16 +87,16 @@ const Work = () => {
             className="wrapper section"
         >
             <div className="top-header">
-                <h1>Work</h1>
-                <span>Things I've built</span>
+                <div className="section-label">Work</div>
+                <h1 className="section-title">Things I've Built</h1>
+                <p className="section-subtitle">Projects and deliverables from my portfolio.</p>
             </div>
 
-            {/* ── Category filter ── */}
-            <motion.div variants={fadeUp} className="work-filters" role="group" aria-label="Filter projects by category">
+            <motion.div variants={fadeUp} className="filter-row" role="group" aria-label="Filter projects by category">
                 {CATEGORIES.map(cat => (
                     <button
                         key={cat}
-                        className={`work-chip ${filter === cat ? 'work-chip-active' : ''}`}
+                        className={`filter-chip ${filter === cat ? 'filter-chip-active' : ''}`}
                         aria-pressed={filter === cat}
                         onClick={() => setFilter(cat)}
                     >
@@ -114,11 +107,7 @@ const Work = () => {
 
             <motion.div
                 layout
-                style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))',
-                    gap: '24px',
-                }}
+                className="projects-grid"
             >
                 <AnimatePresence mode="popLayout">
                 {visible.map(p => (
@@ -129,69 +118,39 @@ const Work = () => {
                         animate="visible"
                         exit={{ opacity: 0, scale: 0.95 }}
                         layout
-                        style={{
-                            background: 'var(--bg-card)',
-                            border: '1px solid var(--border)',
-                            borderRadius: '20px',
-                            padding: '32px 28px',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '12px',
-                            transition: 'all 0.3s ease',
-                            cursor: 'pointer',
-                        }}
-                        whileHover={{
-                            y: -8,
-                            boxShadow: '0 20px 50px rgba(0,0,0,0.35), 0 0 0 1px rgba(37,99,235,0.3)',
-                        }}
+                        className="project-card"
+                        whileHover={{ y: -6 }}
                     >
-                        <div style={{
-                            width: '52px', height: '52px',
-                            borderRadius: '14px',
-                            background: `${p.color}20`,
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            marginBottom: '4px'
-                        }}>
-                            <i className={`uil ${p.icon}`} style={{ fontSize: '1.6rem', color: p.color }}></i>
+                        <div className="project-card-body">
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                <div style={{
+                                    width: '44px', height: '44px',
+                                    borderRadius: '2px',
+                                    background: 'rgba(138, 5, 255, 0.08)',
+                                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                }}>
+                                    <i className={`uil ${p.icon}`} style={{ fontSize: '1.4rem', color: 'var(--color-plasma-violet)' }}></i>
+                                </div>
+                                <h2 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 700, letterSpacing: '-0.02em' }}>{p.name}</h2>
+                            </div>
+
+                            <p className="project-card-desc">{p.desc}</p>
+
+                            <div className="project-card-stack">
+                                {p.stack.map(t => (
+                                    <span key={t}>{t}</span>
+                                ))}
+                            </div>
+
+                            <a href={p.href} target="_blank" rel="noopener noreferrer" className="project-card-link">
+                                View Project <i className="uil uil-github-alt"></i>
+                            </a>
                         </div>
-
-                        <h2 style={{ marginBottom: 0, fontSize: '1.2rem', fontWeight: 600 }}>{p.name}</h2>
-
-                        <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.65', flexGrow: 1 }}>
-                            {p.desc}
-                        </p>
-
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                            {p.stack.map(t => (
-                                <span key={t} style={{
-                                    fontSize: '0.75rem', fontWeight: 600,
-                                    background: 'rgba(37,99,235,0.1)',
-                                    color: 'var(--indigo)',
-                                    border: '1px solid rgba(37,99,235,0.2)',
-                                    padding: '3px 10px', borderRadius: '50px'
-                                }}>{t}</span>
-                            ))}
-                        </div>
-
-                        <a
-                            href={p.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                                marginTop: '8px',
-                                display: 'inline-flex', alignItems: 'center', gap: '6px',
-                                color: 'var(--indigo)', fontWeight: 600, fontSize: '0.875rem',
-                                textDecoration: 'none', transition: 'gap 0.2s'
-                            }}
-                        >
-                            View Project <i className="uil uil-github-alt"></i>
-                        </a>
                     </motion.div>
                 ))}
                 </AnimatePresence>
             </motion.div>
 
-            {/* ── ALL GITHUB REPOSITORIES ── */}
             <GitHubRepos />
         </motion.section>
     );
