@@ -14,7 +14,7 @@ const ScrollProgress = () => {
                 left: 0,
                 right: 0,
                 height: '2px',
-                background: 'linear-gradient(to right, #8a05ff, #d67f2e)',
+                background: 'linear-gradient(to right, #0d0d0d, #6b6b6b)',
                 transformOrigin: '0%',
                 scaleX,
                 zIndex: 9999,

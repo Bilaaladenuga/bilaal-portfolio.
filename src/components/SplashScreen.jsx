@@ -56,7 +56,7 @@ const SplashScreen = () => {
                             style={{
                                 fontSize: '4.5rem',
                                 fontWeight: 900,
-                                color: '#8a05ff',
+                            color: '#8a05ff',
                                 lineHeight: 1,
                             }}
                         >
@@ -70,7 +70,7 @@ const SplashScreen = () => {
                         transition={{ delay: 0.5, duration: 0.9, ease: 'easeInOut' }}
                         style={{
                             height: '3px',
-                            background: 'linear-gradient(to right, #8a05ff, #d67f2e)',
+                            background: 'linear-gradient(to right, #0d0d0d, #6b6b6b)',
                             borderRadius: '937px',
                         }}
                     />
