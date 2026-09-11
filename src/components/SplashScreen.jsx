@@ -56,7 +56,7 @@ const SplashScreen = () => {
                             style={{
                                 fontSize: '4.5rem',
                                 fontWeight: 900,
-                            color: '#8a05ff',
+                            color: '#10b981',
                                 lineHeight: 1,
                             }}
                         >
