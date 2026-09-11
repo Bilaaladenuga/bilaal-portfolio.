@@ -144,8 +144,8 @@ const Home = () => {
                     className="hero-photo-section"
                 >
                     <div className="hero-photo">
+                        <div className="hero-photo-frame"></div>
                         <img src="/assets/IMG-20230421-WA0040.jpg" alt="Bilaal Adenuga" fetchPriority="high" />
-                        <div className="hero-photo-overlay"></div>
                     </div>
 
                     <div className="hero-stats">
