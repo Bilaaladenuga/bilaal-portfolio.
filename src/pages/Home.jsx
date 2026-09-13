@@ -82,6 +82,13 @@ const projects = [
         stack: 'JavaScript • Chrome API',
         href: 'https://github.com/Bilaaladenuga/AnnoTater'
     },
+    {
+        icon: 'uil-book-alt',
+        name: 'My Journal',
+        label: 'A personal writing platform for essays, poems, and notes',
+        stack: 'Next.js • Vercel',
+        href: 'https://my-journal-orcin-ten.vercel.app/'
+    },
 ];
 
 const Home = () => {

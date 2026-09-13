@@ -18,6 +18,7 @@ const projectFilters = {
     'Bidmaj Translator': 'AI',
     'Chess Master': 'Games',
     'Weather App': 'Web',
+    'My Journal': 'Web',
 };
 
 const projects = [
@@ -69,6 +70,13 @@ const projects = [
         desc: 'Live weather for anywhere — pulls real forecast data from a weather API.',
         stack: ['JavaScript', 'Weather API'],
         href: 'https://github.com/Bilaaladenuga/weather-api-fetcher'
+    },
+    {
+        icon: 'uil-book-alt',
+        name: 'My Journal',
+        desc: 'A personal writing platform for essays, poems, notes, and Arabic poetry — a corner of the internet for thinking out loud.',
+        stack: ['Next.js', 'Vercel'],
+        href: 'https://my-journal-orcin-ten.vercel.app/'
     },
 ];
 
