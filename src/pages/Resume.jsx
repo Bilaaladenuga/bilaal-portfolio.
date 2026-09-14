@@ -40,7 +40,7 @@ const Resume = () => {
                         Adenuga Bilaal
                     </h1>
                     <p style={{ margin: '8px 0 16px', color: 'var(--color-plasma-violet)', fontWeight: 600, fontSize: '1rem' }}>
-                        Technical Founder · AI Systems Developer · Full-Stack Engineer
+                        Technical Founder, AI Systems Developer, Full-Stack Engineer
                     </p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', fontSize: '0.875rem', color: 'var(--color-smoke)' }}>
                         <span><i className="uil uil-envelope"></i>&nbsp;adenugabilaal75@gmail.com</span>
@@ -59,7 +59,7 @@ const Resume = () => {
                     <p style={{ color: 'var(--color-smoke)', margin: 0 }}>
                         Technical Founder and Full-Stack Developer with 5+ years building
                         web applications and AI-powered systems. Co-Founder of MOBO Digital (2025),
-                        where I lead the engineering side — architecture, delivery, and making sure
+                        where I lead the engineering side. Architecture, delivery, and making sure
                         the tech actually solves the problem at hand.
                     </p>
                 </ResumeSection>
@@ -71,7 +71,7 @@ const Resume = () => {
                         org="MOBO Digital"
                         period="2025 – Present"
                         bullets={[
-                            'Co-founded the agency and lead the engineering team — from architecture to shipped products.',
+                            'Co-founded the agency and lead the engineering team, from architecture to shipped products.',
                             'Designed the architecture behind our SaaS builds: Next.js 14, Node.js, and PostgreSQL.',
                             'Built AI workflows (OpenAI, LangChain) that automate the tedious parts of client processes.',
                             'Run code reviews and set engineering standards across the dev team.',
@@ -94,7 +94,7 @@ const Resume = () => {
                 <ResumeSection title="Selected Projects">
                     <ResumeEntry title="Qalb Qur'an" org="React Native · Firebase" period="" bullets={["A mobile app for Muslim women to memorise the Qur'an, grow spiritually, and stay close to their community."]} />
                     <ResumeEntry title="Bidmaj Chatbot" org="Python · NLP · REST API" period="" bullets={['A chatbot that understands everyday questions and answers like a real conversation.']} />
-                    <ResumeEntry title="AI Image Generator" org="React · OpenAI DALL-E · Node.js" period="" bullets={["Type a prompt, get an image — text into pictures with OpenAI's image models."]} />
+                    <ResumeEntry title="AI Image Generator" org="React · OpenAI DALL-E · Node.js" period="" bullets={["Type a prompt, get an image. Turns text into pictures with OpenAI's image models."]} />
                     <ResumeEntry title="AnnoTater" org="JavaScript · Chrome Extensions API" period="" bullets={['A Chrome extension for highlighting, annotating, and screenshotting web pages.']} />
                 </ResumeSection>
 
@@ -147,7 +147,7 @@ const Resume = () => {
                         org="Lagos State University (LASU)"
                         period="Current Student"
                         bullets={[
-                            'Studying Surveying and Geoinformatics — developing strong foundations in spatial data analysis, GIS, and mapping systems.',
+                            'Studying Surveying and Geoinformatics, developing strong foundations in spatial data analysis, GIS, and mapping systems.',
                         ]}
                     />
                     <ResumeEntry

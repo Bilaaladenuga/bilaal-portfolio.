@@ -25,7 +25,7 @@ const Footer = () => {
                 </a>
             </div>
             <div className="footer-copy">
-                <p>© 2026 Bilaal Adenuga × MOBO Digital — All rights reserved</p>
+                <p>© 2026 Bilaal Adenuga × MOBO Digital. All rights reserved</p>
             </div>
         </footer>
     );

@@ -5,7 +5,7 @@ const items = [
     {
         icon: 'uil-robot',
         title: 'Agentic AI Workflows',
-        body: 'Experimenting with autonomous AI agents and multi-step workflows — LangGraph and LangChain are my current playground.',
+        body: 'Experimenting with autonomous AI agents and multi-step workflows. LangGraph and LangChain are my current playground.',
     },
     {
         icon: 'uil-briefcase-alt',
@@ -15,17 +15,17 @@ const items = [
     {
         icon: 'uil-code-branch',
         title: 'Next.js 14 Server Actions',
-        body: 'Migrating older codebases to the Next.js 14 App Router with Server Actions — faster loads, cleaner code.',
+        body: 'Migrating older codebases to the Next.js 14 App Router with Server Actions. Faster loads, cleaner code.',
     },
     {
         icon: 'uil-book-open',
         title: 'Reading: DDIA',
-        body: '"Designing Data-Intensive Applications" by Martin Kleppmann — slowly working my way through the distributed systems classic.',
+        body: '"Designing Data-Intensive Applications" by Martin Kleppmann. Slowly working my way through the distributed systems classic.',
     },
     {
         icon: 'uil-chart-growth',
         title: 'System Architecture',
-        body: 'Learning scalable backend patterns — queues, caching, and API design that holds up under real traffic.',
+        body: 'Learning scalable backend patterns. Queues, caching, and API design that holds up under real traffic.',
     },
 ];
 

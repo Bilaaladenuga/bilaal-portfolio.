@@ -11,7 +11,7 @@ const phases = [
     {
         year: '2021 – 2022',
         title: 'Moving Beyond Static Pages',
-        body: 'Got hooked on React and Next.js. Moved from static pages to real, data-driven apps — picking up state management, component design, and frontend architecture along the way.',
+        body: 'Got hooked on React and Next.js. Moved from static pages to real, data-driven apps, picking up state management, component design, and frontend architecture along the way.',
         icon: 'uil-react',
     },
     {

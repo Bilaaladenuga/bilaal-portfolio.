@@ -32,49 +32,49 @@ const projects = [
     {
         icon: 'uil-robot',
         name: 'Bidmaj Chatbot',
-        desc: 'A chatbot that understands everyday questions and answers like a real conversation — NLP on a Python backend.',
+        desc: 'A chatbot that understands everyday questions and answers like a real conversation. NLP on a Python backend.',
         stack: ['Python', 'NLP', 'API'],
         href: 'https://github.com/Bilaaladenuga/Bidmaj-Chatbot-'
     },
     {
         icon: 'uil-image',
         name: 'AI Image Gen',
-        desc: 'Type a prompt, get an image — text into pictures with OpenAI\'s image models.',
+        desc: 'Type a prompt, get an image. Turns text into pictures with OpenAI\'s image models.',
         stack: ['React', 'OpenAI', 'Node.js'],
         href: 'https://github.com/Bilaaladenuga/AI-Image-generator-'
     },
     {
         icon: 'uil-edit',
         name: 'AnnoTater',
-        desc: 'A Chrome extension for highlighting, annotating, and screenshotting any webpage — built to make research less painful.',
+        desc: 'A Chrome extension for highlighting, annotating, and screenshotting any webpage. Built to make research less painful.',
         stack: ['JavaScript', 'Chrome API'],
         href: 'https://github.com/Bilaaladenuga/AnnoTater'
     },
     {
         icon: 'uil-globe',
         name: 'Bidmaj Translator',
-        desc: 'Real-time translation across languages — built to make conversations easier across borders.',
+        desc: 'Real-time translation across languages. Built to make conversations easier across borders.',
         stack: ['Python', 'Google Translate API'],
         href: 'https://github.com/Bilaaladenuga/Bidmaj-Language-Translator-'
     },
     {
         icon: 'uil-chess',
         name: 'Chess Master',
-        desc: 'A full chess game in Python — real rules, move validation, and a working opponent to play.',
+        desc: 'A full chess game in Python. Real rules, move validation, and a working opponent to play.',
         stack: ['Python', 'Pygame'],
         href: 'https://github.com/Bilaaladenuga/Chess-master'
     },
     {
         icon: 'uil-cloud-sun',
         name: 'Weather App',
-        desc: 'Live weather for anywhere — pulls real forecast data from a weather API.',
+        desc: 'Live weather for anywhere. Pulls real forecast data from a weather API.',
         stack: ['JavaScript', 'Weather API'],
         href: 'https://github.com/Bilaaladenuga/weather-api-fetcher'
     },
     {
         icon: 'uil-book-alt',
         name: 'My Journal',
-        desc: 'A personal writing platform for essays, poems, notes, and Arabic poetry — a corner of the internet for thinking out loud.',
+        desc: 'A personal writing platform for essays, poems, notes, and Arabic poetry. A corner of the internet for thinking out loud.',
         stack: ['Next.js', 'Vercel'],
         href: 'https://my-journal-orcin-ten.vercel.app/'
     },
@@ -97,7 +97,7 @@ const Work = () => {
             <div className="top-header">
                 <div className="section-label">Work</div>
                 <h1 className="section-title">Things I've Built</h1>
-                <p className="section-subtitle">Projects and deliverables from my portfolio.</p>
+                <p className="section-subtitle">Projects and things I've built.</p>
             </div>
 
             <motion.div variants={fadeUp} className="filter-row" role="group" aria-label="Filter projects by category">

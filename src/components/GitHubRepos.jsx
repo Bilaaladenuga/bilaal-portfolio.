@@ -4,21 +4,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 const GITHUB_USERNAME = 'Bilaaladenuga';
 
 const CURATED_DESCRIPTIONS = {
-  'AI-Image-generator-': 'Type a prompt, get an image — a web app that turns text into pictures with OpenAI\'s image models.',
-  'AlFatwa': 'An Islamic knowledge and Q&A platform — making authentic religious guidance easy to find online.',
-  'AnnoTater': 'A Chrome extension for highlighting, annotating, and screenshotting any webpage — built to make research less painful.',
-  'Bidmaj-Chatbot-': 'A chatbot that understands everyday questions and answers like a real conversation — NLP on a Python backend.',
-  'Bidmaj-Language-Translator-': 'Real-time translation across languages — built to make conversations easier across borders.',
+  'AI-Image-generator-': 'Type a prompt, get an image. A web app that turns text into pictures with OpenAI\'s image models.',
+  'AlFatwa': 'An Islamic knowledge and Q&A platform, making authentic religious guidance easy to find online.',
+  'AnnoTater': 'A Chrome extension for highlighting, annotating, and screenshotting any webpage. Built to make research less painful.',
+  'Bidmaj-Chatbot-': 'A chatbot that understands everyday questions and answers like a real conversation. NLP on a Python backend.',
+  'Bidmaj-Language-Translator-': 'Real-time translation across languages. Built to make conversations easier across borders.',
   'BIDMAJ-TEXTMORPH-': 'A text-to-speech converter that reads your text out loud in natural, human-sounding speech.',
-  'bilaal-portfolio.': 'My personal portfolio — a React + Vite site with my projects, journey, and experience.',
-  'Chess-master': 'A full chess game in Python — real rules, move validation, and a working opponent to play.',
-  'My-browser-': 'A custom web browser built in Python — exploring how browsers work and GUI automation.',
+  'bilaal-portfolio.': 'My personal portfolio. A React + Vite site with my projects, journey, and experience.',
+  'Chess-master': 'A full chess game in Python. Real rules, move validation, and a working opponent to play.',
+  'My-browser-': 'A custom web browser built in Python, exploring how browsers work and GUI automation.',
   'My-Portfolio-': 'An earlier version of my portfolio, kept around as a milestone from my web dev journey.',
-  'pizza-webpage-': 'A polished, responsive landing page for a pizza restaurant — all about the order button.',
-  'ResuCraft': 'An AI-powered resume builder for clean, ATS-friendly resumes — with templates and Gemini help.',
-  'TIC-TAC-TOE': 'Classic Tic-Tac-Toe with a clean, interactive board — a fun little exercise in game logic.',
-  'weather-api-fetcher': 'Live weather for anywhere — pulls real forecast data from a weather API.',
-  'Weather-App-': 'A modern weather app with a Tailwind-styled UI — live forecast data from weather APIs.',
+  'pizza-webpage-': 'A polished, responsive landing page for a pizza restaurant. All about the order button.',
+  'ResuCraft': 'An AI-powered resume builder for clean, ATS-friendly resumes. Templates and Gemini help.',
+  'TIC-TAC-TOE': 'Classic Tic-Tac-Toe with a clean, interactive board. A fun little exercise in game logic.',
+  'weather-api-fetcher': 'Live weather for anywhere. Pulls real forecast data from a weather API.',
+  'Weather-App-': 'A modern weather app with a Tailwind-styled UI. Live forecast data from weather APIs.',
 };
 const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`;
 const CACHE_KEY = 'github-repos-cache-v3';
@@ -95,7 +95,7 @@ const GitHubRepos = () => {
 
       try {
         const res = await fetch(API_URL, { headers: { Accept: 'application/vnd.github+json' } });
-        if (res.status === 403) throw new Error('GitHub API rate limit reached — please try again later.');
+        if (res.status === 403) throw new Error('GitHub API rate limit reached. Please try again later.');
         if (!res.ok) throw new Error(`GitHub API error (${res.status})`);
 
         const data = await res.json();
@@ -154,7 +154,7 @@ const GitHubRepos = () => {
       <motion.div variants={fadeUp} className="top-header">
         <div className="section-label">GitHub</div>
         <h2 className="section-title">All Repositories</h2>
-        <p className="section-subtitle">Public projects — pulled live from my GitHub.</p>
+        <p className="section-subtitle">Public projects, pulled live from my GitHub.</p>
       </motion.div>
 
       {(status === 'ready' || repos.length > 0) && (

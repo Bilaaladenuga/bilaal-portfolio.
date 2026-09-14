@@ -108,7 +108,7 @@ const Home = () => {
             {/* ── HERO ── */}
             <section className="wrapper hero" id="home">
                 <motion.div variants={stagger}>
-                    <motion.div variants={fadeUp} className="section-label">Portfolio — 2026</motion.div>
+                    <motion.div variants={fadeUp} className="section-label">Portfolio, 2026</motion.div>
 
                     <motion.h1 variants={fadeUp} className="hero-name">
                         I'm the<br />
@@ -130,8 +130,8 @@ const Home = () => {
                     </motion.div>
 
                     <motion.p variants={fadeUp} className="hero-description" style={{ marginTop: '24px' }}>
-                        I build web apps and AI tools that people actually enjoy using —
-                        fast, reliable, and simple to maintain. I help businesses turn rough ideas
+                        I build web apps and AI tools that people actually enjoy using. Fast,
+                        reliable, and simple to maintain. I help businesses turn rough ideas
                         into real, working products.
                     </motion.p>
 
@@ -198,7 +198,7 @@ const Home = () => {
                         <h2 className="section-title">More than just<br />writing code.</h2>
                         <div className="about-content">
                             <p>
-                                I don't just write code — I build things that solve real problems.
+                                I don't just write code. I build things that solve real problems.
                                 My favourite kind of work is taking a messy business idea and turning
                                 it into software people actually use.
                             </p>
@@ -209,7 +209,7 @@ const Home = () => {
                             </p>
                             <p>
                                 Day to day, that means working across <strong>Modern Web Development</strong> (React, Next.js)
-                                and <strong>Artificial Intelligence</strong> — LLM integrations, automated workflows,
+                                and <strong>Artificial Intelligence</strong>. LLM integrations, automated workflows,
                                 and tools that save people time and headaches.
                             </p>
                         </div>
