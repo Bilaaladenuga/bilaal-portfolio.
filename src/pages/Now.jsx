@@ -40,7 +40,7 @@ const Now = () => {
             <div className="top-header">
                 <div className="section-label">Now</div>
                 <h1 className="section-title">What I'm Focused On</h1>
-                <p className="section-subtitle">Current projects, learning, and interests.</p>
+                <p className="section-subtitle">What I'm working on right now.</p>
             </div>
 
             <div className="now-grid">

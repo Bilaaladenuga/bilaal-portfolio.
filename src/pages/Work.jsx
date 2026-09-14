@@ -97,7 +97,7 @@ const Work = () => {
             <div className="top-header">
                 <div className="section-label">Work</div>
                 <h1 className="section-title">Things I've Built</h1>
-                <p className="section-subtitle">Projects and things I've built.</p>
+                <p className="section-subtitle">Things I've built.</p>
             </div>
 
             <motion.div variants={fadeUp} className="filter-row" role="group" aria-label="Filter projects by category">

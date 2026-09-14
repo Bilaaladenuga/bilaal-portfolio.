@@ -57,10 +57,10 @@ const Resume = () => {
                 {/* Summary */}
                 <ResumeSection title="Summary">
                     <p style={{ color: 'var(--color-smoke)', margin: 0 }}>
-                        Technical Founder and Full-Stack Developer with 5+ years building
-                        web applications and AI-powered systems. Co-Founder of MOBO Digital (2025),
+                        Full-Stack Developer and Technical Founder with 5+ years building
+                        web apps and AI systems. Co-Founder of MOBO Digital (2025),
                         where I lead the engineering side. Architecture, delivery, and making sure
-                        the tech actually solves the problem at hand.
+                        the tech actually works.
                     </p>
                 </ResumeSection>
 
@@ -71,9 +71,9 @@ const Resume = () => {
                         org="MOBO Digital"
                         period="2025 – Present"
                         bullets={[
-                            'Co-founded the agency and lead the engineering team, from architecture to shipped products.',
+                            'Co-founded the agency and lead the engineering team, from architecture to production.',
                             'Designed the architecture behind our SaaS builds: Next.js 14, Node.js, and PostgreSQL.',
-                            'Built AI workflows (OpenAI, LangChain) that automate the tedious parts of client processes.',
+                            'Built AI workflows (OpenAI, LangChain) that cut out the tedious parts of client processes.',
                             'Run code reviews and set engineering standards across the dev team.',
                         ]}
                     />
@@ -82,10 +82,10 @@ const Resume = () => {
                         org="Self-Employed"
                         period="2021 – 2025"
                         bullets={[
-                            'Delivered 10+ production web applications for clients across e-commerce, education, and services.',
+                            'Shipped 10+ production web apps for clients in e-commerce, education, and services.',
                             'Built React and Next.js frontends with Framer Motion animations and Tailwind CSS styling.',
                             'Developed RESTful APIs with Node.js/Express and Python/FastAPI backends.',
-                            'Implemented third-party integrations including payment gateways and AI APIs.',
+                            'Added third-party integrations like payment gateways and AI APIs.',
                         ]}
                     />
                 </ResumeSection>
@@ -147,7 +147,7 @@ const Resume = () => {
                         org="Lagos State University (LASU)"
                         period="Current Student"
                         bullets={[
-                            'Studying Surveying and Geoinformatics, developing strong foundations in spatial data analysis, GIS, and mapping systems.',
+                            'Studying Surveying and Geoinformatics, building foundations in spatial data analysis, GIS, and mapping systems.',
                         ]}
                     />
                     <ResumeEntry
@@ -155,7 +155,7 @@ const Resume = () => {
                         org="Online Platforms"
                         period="2020 – Present"
                         bullets={[
-                            'Completed structured courses in full-stack web development, data structures, algorithms, and AI engineering.',
+                            'Done structured courses in full-stack web development, data structures, algorithms, and AI engineering.',
                         ]}
                     />
                 </ResumeSection>
@@ -176,7 +176,7 @@ const ResumeEntry = ({ title, org, period, bullets }) => (
         <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '4px', marginBottom: '6px' }}>
             <div>
                 <span style={{ fontWeight: 700, color: 'var(--color-obsidian)' }}>{title}</span>
-                {org && <span style={{ color: 'var(--color-smoke)', marginLeft: '8px', fontSize: '0.875rem' }}>— {org}</span>}
+                {org && <span style={{ color: 'var(--color-smoke)', marginLeft: '8px', fontSize: '0.875rem' }}>/ {org}</span>}
             </div>
             {period && <span style={{ color: 'var(--color-ash)', fontSize: '0.8rem', fontFamily: 'var(--font-mono)' }}>{period}</span>}
         </div>

@@ -9,7 +9,7 @@ const CURATED_DESCRIPTIONS = {
   'AnnoTater': 'A Chrome extension for highlighting, annotating, and screenshotting any webpage. Built to make research less painful.',
   'Bidmaj-Chatbot-': 'A chatbot that understands everyday questions and answers like a real conversation. NLP on a Python backend.',
   'Bidmaj-Language-Translator-': 'Real-time translation across languages. Built to make conversations easier across borders.',
-  'BIDMAJ-TEXTMORPH-': 'A text-to-speech converter that reads your text out loud in natural, human-sounding speech.',
+  'BIDMAJ-TEXTMORPH-': 'A text-to-speech converter that reads your text out loud naturally.',
   'bilaal-portfolio.': 'My personal portfolio. A React + Vite site with my projects, journey, and experience.',
   'Chess-master': 'A full chess game in Python. Real rules, move validation, and a working opponent to play.',
   'My-browser-': 'A custom web browser built in Python, exploring how browsers work and GUI automation.',

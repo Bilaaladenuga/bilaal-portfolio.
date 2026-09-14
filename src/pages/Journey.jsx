@@ -17,19 +17,19 @@ const phases = [
     {
         year: '2023 – 2024',
         title: 'Backend, AI & Full Stack',
-        body: 'Went full-stack — Node.js, Python, PostgreSQL. Then I started playing with AI: OpenAI APIs, chatbots, image generators, and automated workflows with LangChain.',
+        body: 'Went full-stack. Node.js, Python, PostgreSQL. Then I started playing with AI: OpenAI APIs, chatbots, image generators, and automated workflows with LangChain.',
         icon: 'uil-robot',
     },
     {
         year: '2025',
         title: 'Co-Founding MOBO Digital',
-        body: 'Co-founded MOBO Digital, an agency that builds web solutions for real clients. My focus shifted to business logic, leading the technical side, and shipping software that actually makes a difference.',
+        body: 'Co-founded MOBO Digital, an agency that builds web solutions for real clients. My focus shifted to business logic and leading the technical side.',
         icon: 'uil-rocket',
     },
     {
         year: 'Now',
         title: 'AI Systems & Architecture',
-        body: 'Diving deeper into LLM agents, backend architecture, and end-to-end AI products. There\'s always a new problem worth solving.',
+        body: 'Diving deeper into LLM agents, backend architecture, and end-to-end AI products. Always a new problem worth solving.',
         icon: 'uil-chart-growth',
     },
 ];
@@ -45,7 +45,7 @@ const Journey = () => {
             <div className="top-header">
                 <div className="section-label">Journey</div>
                 <h1 className="section-title">How I Got Here</h1>
-                <p className="section-subtitle">A timeline of my career and learning path.</p>
+                <p className="section-subtitle">How I got from there to here.</p>
             </div>
 
             <div className="timeline">

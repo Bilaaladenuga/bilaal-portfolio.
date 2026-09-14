@@ -194,7 +194,7 @@ const Home = () => {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <div className="section-label">01 — About</div>
+                        <div className="section-label">01. About</div>
                         <h2 className="section-title">More than just<br />writing code.</h2>
                         <div className="about-content">
                             <p>
@@ -228,7 +228,7 @@ const Home = () => {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <div className="section-label">Technical Arsenal</div>
+                        <div className="section-label">Tech Stack</div>
                         <div className="skills-grid" style={{ marginTop: '16px' }}>
                             {skills.map((skill) => (
                                 <motion.div
@@ -249,7 +249,7 @@ const Home = () => {
             {/* ── SELECTED PROJECTS ── */}
             <section className="wrapper section" id="projects">
                 <div className="top-header">
-                    <div className="section-label">02 — Projects</div>
+                        <div className="section-label">02. Projects</div>
                     <h2 className="section-title">Selected Work</h2>
                     <p className="section-subtitle">A few things I'm proud of building.</p>
                 </div>
