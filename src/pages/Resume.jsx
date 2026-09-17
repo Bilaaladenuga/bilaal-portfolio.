@@ -40,11 +40,12 @@ const Resume = () => {
                         Adenuga Bilaal
                     </h1>
                     <p style={{ margin: '8px 0 16px', color: 'var(--color-plasma-violet)', fontWeight: 600, fontSize: '1rem' }}>
-                        Technical Founder, AI Systems Developer, Full-Stack Engineer
+                        Full-Stack Developer / AI Systems Engineer
                     </p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', fontSize: '0.875rem', color: 'var(--color-smoke)' }}>
                         <span><i className="uil uil-envelope"></i>&nbsp;adenugabilaal75@gmail.com</span>
                         <span><i className="uil uil-phone"></i>&nbsp;+234 70 7817 8909</span>
+                        <span><i className="uil uil-map-marker"></i>&nbsp;Lagos, Nigeria</span>
                         <a href="https://ng.linkedin.com/in/adenuga-bilaal" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-smoke)', textDecoration: 'none' }}>
                             <i className="uil uil-linkedin-alt"></i>&nbsp;linkedin.com/in/adenuga-bilaal
                         </a>
@@ -55,12 +56,12 @@ const Resume = () => {
                 </div>
 
                 {/* Summary */}
-                <ResumeSection title="Summary">
+                <ResumeSection title="Professional Summary">
                     <p style={{ color: 'var(--color-smoke)', margin: 0 }}>
-                        Full-Stack Developer and Technical Founder with 5+ years building
-                        web apps and AI systems. Co-Founder of MOBO Digital (2025),
-                        where I lead the engineering side. Architecture, delivery, and making sure
-                        the tech actually works.
+                        Full-stack developer with 5+ years building web applications, AI-powered systems, and geospatial tools.
+                        Co-Founder of MOBO Digital, where I lead the engineering side. I work across React, Next.js, Node.js, and Python,
+                        with a focus on LLM integrations, backend architecture, and data-driven applications. My background in
+                        geoinformatics gives me a unique edge in spatial analysis and mapping projects.
                     </p>
                 </ResumeSection>
 
@@ -69,45 +70,97 @@ const Resume = () => {
                     <ResumeEntry
                         title="Co-Founder & Technical Lead"
                         org="MOBO Digital"
-                        period="2025 – Present"
+                        period="2025 - Present"
                         bullets={[
-                            'Co-founded the agency and lead the engineering team, from architecture to production.',
-                            'Designed the architecture behind our SaaS builds: Next.js 14, Node.js, and PostgreSQL.',
-                            'Built AI workflows (OpenAI, LangChain) that cut out the tedious parts of client processes.',
-                            'Run code reviews and set engineering standards across the dev team.',
+                            'Co-founded a web agency building SaaS products and AI solutions for clients across different industries.',
+                            'Designed and shipped full-stack applications using Next.js 14, Node.js, and PostgreSQL.',
+                            'Built AI workflows with OpenAI and LangChain that automate repetitive client processes.',
+                            'Lead code reviews, set engineering standards, and mentor junior developers on the team.',
+                        ]}
+                    />
+                    <ResumeEntry
+                        title="Junior Developer"
+                        org="Bidmaj Global"
+                        period="2024 - Present"
+                        bullets={[
+                            'Build and maintain software projects for practical business use cases.',
+                            'Work with web technologies, REST APIs, automation, and Microsoft Power Platform.',
+                            'Debug issues and improve existing implementations across multiple projects.',
                         ]}
                     />
                     <ResumeEntry
                         title="Freelance Full-Stack Developer"
                         org="Self-Employed"
-                        period="2021 – 2025"
+                        period="2021 - 2025"
                         bullets={[
                             'Shipped 10+ production web apps for clients in e-commerce, education, and services.',
-                            'Built React and Next.js frontends with Framer Motion animations and Tailwind CSS styling.',
-                            'Developed RESTful APIs with Node.js/Express and Python/FastAPI backends.',
-                            'Added third-party integrations like payment gateways and AI APIs.',
+                            'Built React and Next.js frontends with Framer Motion animations and Tailwind CSS.',
+                            'Developed REST APIs with Node.js/Express and Python/FastAPI backends.',
+                            'Integrated payment gateways, AI APIs, and third-party services.',
                         ]}
                     />
                 </ResumeSection>
 
                 {/* Projects */}
-                <ResumeSection title="Selected Projects">
-                    <ResumeEntry title="Qalb Qur'an" org="React Native · Firebase" period="" bullets={["A mobile app for Muslim women to memorise the Qur'an, grow spiritually, and stay close to their community."]} />
-                    <ResumeEntry title="Bidmaj Chatbot" org="Python · NLP · REST API" period="" bullets={['A chatbot that understands everyday questions and answers like a real conversation.']} />
-                    <ResumeEntry title="AI Image Generator" org="React · OpenAI DALL-E · Node.js" period="" bullets={["Type a prompt, get an image. Turns text into pictures with OpenAI's image models."]} />
-                    <ResumeEntry title="AnnoTater" org="JavaScript · Chrome Extensions API" period="" bullets={['A Chrome extension for highlighting, annotating, and screenshotting web pages.']} />
+                <ResumeSection title="Key Projects">
+                    <ResumeEntry
+                        title="Urban Heat Intelligence Mapper"
+                        org="Python / React / WebGIS"
+                        period=""
+                        bullets={[
+                            'Geospatial intelligence system that analyses urban heat patterns using Landsat satellite imagery.',
+                            'Performs NDVI vegetation analysis, NDBI built-up analysis, and urban heat hotspot detection.',
+                            'Integrates OpenStreetMap data and explores spatial statistics (Moran\'s I, Getis-Ord Gi*).',
+                        ]}
+                    />
+                    <ResumeEntry
+                        title="CV Job Matching Engine"
+                        org="Python / Machine Learning / NLP"
+                        period=""
+                        bullets={[
+                            'Machine learning system that matches candidate CVs with job descriptions.',
+                            'Goes beyond keyword matching to understand skill relationships and experience alignment.',
+                            'Identifies skill gaps and generates match scores using NLP and semantic similarity.',
+                        ]}
+                    />
+                    <ResumeEntry
+                        title="Water Access Mapper"
+                        org="JavaScript / WebGIS"
+                        period=""
+                        bullets={[
+                            'Interactive mapping application for exploring and documenting water access points across Lagos.',
+                            'Supports location search, satellite map views, water-point classification, and GeoJSON/CSV export.',
+                        ]}
+                    />
+                    <ResumeEntry
+                        title="ResuCraft"
+                        org="TypeScript / React / AI"
+                        period=""
+                        bullets={[
+                            'AI-assisted resume builder that helps users create and optimise resumes for job applications.',
+                            'Features structured resume building, AI content suggestions, and job-focused optimisation.',
+                        ]}
+                    />
+                    <ResumeEntry
+                        title="Qalb Qur'an"
+                        org="React Native / Firebase"
+                        period=""
+                        bullets={[
+                            'Mobile app for Muslim women to support Quran memorisation, spiritual growth, and community.',
+                        ]}
+                    />
                 </ResumeSection>
 
                 {/* Skills */}
                 <ResumeSection title="Technical Skills">
                     <div style={{ display: 'grid', gridTemplateColumns: '140px 1fr', gap: '8px 16px', fontSize: '0.9rem', marginBottom: '16px' }}>
                         {[
-                            ['Frontend', 'React, Next.js 14, Tailwind CSS, Framer Motion, HTML5, CSS3'],
-                            ['Backend', 'Node.js, Express, Python, FastAPI, REST APIs'],
-                            ['Databases', 'PostgreSQL, Firebase, MongoDB'],
-                            ['AI / ML', 'OpenAI API, LangChain, LangGraph, Prompt Engineering'],
-                            ['Tools', 'Git, GitHub Actions, Vercel, Docker (basics), CI/CD'],
-                            ['Other', 'System Design, Agile, Technical Leadership'],
+                            ['Languages', 'JavaScript, TypeScript, Python, HTML5, CSS3'],
+                            ['Frontend', 'React, Next.js 14, Tailwind CSS, Framer Motion, Responsive UI'],
+                            ['Backend', 'Node.js, Express, FastAPI, REST APIs, PostgreSQL, Firebase'],
+                            ['AI / ML', 'OpenAI API, LangChain, LangGraph, RAG, NLP, Prompt Engineering'],
+                            ['Geospatial', 'GIS, WebGIS, Spatial Analysis, Landsat, GeoJSON, Power BI'],
+                            ['Tools', 'Git, GitHub Actions, Vercel, Docker, CI/CD, Agile'],
                         ].map(([label, value]) => (
                             <React.Fragment key={label}>
                                 <span style={{ fontWeight: 600, color: 'var(--color-obsidian)', fontFamily: 'var(--font-mono)', fontSize: '0.8rem' }}>{label}</span>
@@ -115,47 +168,16 @@ const Resume = () => {
                             </React.Fragment>
                         ))}
                     </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '8px' }}>
-                        {[
-                            { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
-                            { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
-                            { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/000000' },
-                            { name: 'Tailwind', icon: 'https://cdn.simpleicons.org/tailwindcss/06B6D4' },
-                            { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
-                            { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB' },
-                            { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
-                            { name: 'Power BI', icon: '/assets/powerbi.svg' },
-                            { name: 'Git', icon: 'https://cdn.simpleicons.org/git/F05032' },
-                            { name: 'Firebase', icon: 'https://cdn.simpleicons.org/firebase/FFCA28' },
-                        ].map(s => (
-                            <div key={s.name} title={s.name} style={{
-                                display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px',
-                                background: 'var(--color-paper-white)', border: '1px solid var(--color-graphite-hairline)',
-                                borderRadius: '2px', padding: '8px 10px', minWidth: '52px'
-                            }}>
-                                <img src={s.icon} alt={s.name} style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
-                                <span style={{ fontSize: '0.65rem', color: 'var(--color-smoke)', fontWeight: 500 }}>{s.name}</span>
-                            </div>
-                        ))}
-                    </div>
                 </ResumeSection>
 
                 {/* Education */}
                 <ResumeSection title="Education">
                     <ResumeEntry
-                        title="B.Sc. Surveying &amp; Geoinformatics"
+                        title="B.Sc. Surveying & Geoinformatics"
                         org="Lagos State University (LASU)"
-                        period="Current Student"
+                        period="2020 - Present"
                         bullets={[
-                            'Studying Surveying and Geoinformatics, building foundations in spatial data analysis, GIS, and mapping systems.',
-                        ]}
-                    />
-                    <ResumeEntry
-                        title="Self-Taught Software Engineer"
-                        org="Online Platforms"
-                        period="2020 – Present"
-                        bullets={[
-                            'Done structured courses in full-stack web development, data structures, algorithms, and AI engineering.',
+                            'Studying spatial data analysis, GIS, and mapping systems. Coursework includes remote sensing, cartography, and geodetic surveying.',
                         ]}
                     />
                 </ResumeSection>
