@@ -46,18 +46,20 @@ const scaleIn = {
 };
 
 const skills = [
-    { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
-    { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
-    { name: 'Next.js 14', icon: 'https://cdn.simpleicons.org/nextdotjs/000000' },
-    { name: 'Tailwind CSS', icon: 'https://cdn.simpleicons.org/tailwindcss/06B6D4' },
-    { name: 'Framer Motion', icon: 'https://cdn.simpleicons.org/framer/000000' },
-    { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
     { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB' },
+    { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
+    { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6' },
+    { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
+    { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/000000' },
+    { name: 'FastAPI', icon: 'https://cdn.simpleicons.org/fastapi/009688' },
+    { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
     { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
+    { name: 'SQL', icon: 'https://cdn.simpleicons.org/mysql/4479A1' },
+    { name: 'PowerShell', icon: 'https://cdn.simpleicons.org/powershell/5391FE' },
     { name: 'Power BI', icon: '/assets/powerbi.svg' },
-    { name: 'Git & CI/CD', icon: 'https://cdn.simpleicons.org/git/F05032' },
-    { name: 'LangChain', icon: 'https://cdn.simpleicons.org/langchain/1C3C3C' },
-    { name: 'System Design', icon: 'https://cdn.simpleicons.org/diagramsdotnet/F08705' },
+    { name: 'Pandas', icon: 'https://cdn.simpleicons.org/pandas/150458' },
+    { name: 'Git', icon: 'https://cdn.simpleicons.org/git/F05032' },
+    { name: 'Vercel', icon: 'https://cdn.simpleicons.org/vercel/000000' },
 ];
 
 const projects = [
