@@ -155,17 +155,45 @@ const Resume = () => {
                 <ResumeSection title="Technical Skills">
                     <div style={{ display: 'grid', gridTemplateColumns: '140px 1fr', gap: '8px 16px', fontSize: '0.9rem', marginBottom: '16px' }}>
                         {[
-                            ['Languages', 'JavaScript, TypeScript, Python, HTML5, CSS3'],
-                            ['Frontend', 'React, Next.js 14, Tailwind CSS, Framer Motion, Responsive UI'],
-                            ['Backend', 'Node.js, Express, FastAPI, REST APIs, PostgreSQL, Firebase'],
+                            ['Languages', 'Python, JavaScript, TypeScript, SQL, PowerShell, HTML5, CSS3'],
+                            ['Data Engineering', 'ETL Pipelines, REST API Integration, Web Scraping, Pandas, Power BI'],
+                            ['Databases', 'PostgreSQL (Supabase), SSMS, Firebase, MongoDB'],
                             ['AI / ML', 'OpenAI API, LangChain, LangGraph, RAG, NLP, Prompt Engineering'],
-                            ['Geospatial', 'GIS, WebGIS, Spatial Analysis, Landsat, GeoJSON, Power BI'],
-                            ['Tools', 'Git, GitHub Actions, Vercel, Docker, CI/CD, Agile'],
+                            ['Geospatial', 'GIS, WebGIS, Spatial Analysis, Landsat, GeoJSON'],
+                            ['Web & Deployment', 'Next.js, React, FastAPI, Node.js, Vercel, Git, GitHub, CI/CD'],
+                            ['Other', 'Power Automate, System Design, Agile, Technical Leadership'],
                         ].map(([label, value]) => (
                             <React.Fragment key={label}>
                                 <span style={{ fontWeight: 600, color: 'var(--color-obsidian)', fontFamily: 'var(--font-mono)', fontSize: '0.8rem' }}>{label}</span>
                                 <span style={{ color: 'var(--color-smoke)' }}>{value}</span>
                             </React.Fragment>
+                        ))}
+                    </div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '8px' }}>
+                        {[
+                            { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB' },
+                            { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
+                            { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6' },
+                            { name: 'SQL', icon: 'https://cdn.simpleicons.org/mysql/4479A1' },
+                            { name: 'PowerShell', icon: 'https://cdn.simpleicons.org/powershell/5391FE' },
+                            { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
+                            { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/000000' },
+                            { name: 'FastAPI', icon: 'https://cdn.simpleicons.org/fastapi/009688' },
+                            { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
+                            { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
+                            { name: 'Power BI', icon: '/assets/powerbi.svg' },
+                            { name: 'Git', icon: 'https://cdn.simpleicons.org/git/F05032' },
+                            { name: 'Vercel', icon: 'https://cdn.simpleicons.org/vercel/000000' },
+                            { name: 'Pandas', icon: 'https://cdn.simpleicons.org/pandas/150458' },
+                        ].map(s => (
+                            <div key={s.name} title={s.name} style={{
+                                display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px',
+                                background: 'var(--color-paper-white)', border: '1px solid var(--color-graphite-hairline)',
+                                borderRadius: '2px', padding: '8px 10px', minWidth: '52px'
+                            }}>
+                                <img src={s.icon} alt={s.name} style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
+                                <span style={{ fontSize: '0.65rem', color: 'var(--color-smoke)', fontWeight: 500 }}>{s.name}</span>
+                            </div>
                         ))}
                     </div>
                 </ResumeSection>
